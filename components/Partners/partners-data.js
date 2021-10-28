@@ -1,0 +1,17 @@
+export default [
+    require('@/assets/img/partners/1.png'),
+    require('@/assets/img/partners/2.png'),
+    require('@/assets/img/partners/3.png'),
+    require('@/assets/img/partners/4.png'),
+    require('@/assets/img/partners/5.png'),
+    require('@/assets/img/partners/6.png'),
+    require('@/assets/img/partners/7.png'),
+    require('@/assets/img/partners/8.png'),
+    require('@/assets/img/partners/9.png'),
+    require('@/assets/img/partners/10.png'),
+    require('@/assets/img/partners/11.png'),
+    require('@/assets/img/partners/12.png'),
+    require('@/assets/img/partners/13.png'),
+    require('@/assets/img/partners/14.png'),
+    require('@/assets/img/partners/15.png'),
+]

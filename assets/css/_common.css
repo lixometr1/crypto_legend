@@ -1,0 +1,38 @@
+body {
+  @apply font-main text-white bg-bg text-lg sm:text-sm leading-tight;
+}
+.container {
+  padding-right: calc(3.125rem + theme("width.navbar"));
+  @apply max-w-[var(--container-width)] mx-auto pl-[3.125rem] md:pr-[3.125rem] xs:px-8;
+}
+
+h1,
+.h1 {
+  @apply font-bold text-[10.25rem] xl:text-[9rem] lg:text-[5.625rem]  md:text-7xl xs:text-5xl;
+}
+
+h2,
+.h2 {
+  @apply text-5xl lg:text-4xl md:text-2xl font-bold;
+}
+
+h3,
+.h3 {
+  @apply font-normal text-5xl lg:text-4xl sm:text-2xl;
+}
+
+.paragraph {
+}
+.link {
+  @apply hover:text-primary transition-colors;
+}
+
+.c-scrollbar {
+  &_thumb {
+    @apply bg-primary opacity-50 !important;
+  }
+}
+
+.page-offset {
+  @apply pt-[150px] pb-20 xl:pb-14 xl:pt-[120px] ;
+}

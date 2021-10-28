@@ -1,0 +1,9 @@
+:root {
+  --color-primary: theme("colors.orange");
+  --navbar-width: 3.95rem;
+  --container-width: 1720px;
+}
+@screen lg {
+  :root {
+  }
+}
