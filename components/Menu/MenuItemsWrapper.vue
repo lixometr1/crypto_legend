@@ -73,7 +73,19 @@ export default {
 
 <style lang="postcss">
 .menu-items-wrapper {
-  @apply flex-1 flex items-stretch space-x-10 min-h-0;
+  @apply flex-1 flex items-stretch space-x-14 min-h-0;
+  .menu-main-items {
+    @apply pr-20 relative md:pr-0;
+    &::before {
+      content: "";
+      @apply absolute top-0 bottom-0 right-0 w-px md:hidden;
+      background-image: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0)
+      );
+    }
+  }
   &.sub-open {
     @apply md:space-x-0;
   }
