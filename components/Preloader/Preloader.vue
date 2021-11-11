@@ -76,23 +76,22 @@ export default {
       });
     },
 
-    startProgress() {},
     easeOutCubic(x) {
       return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2;
     },
     startProgressTimer() {
-      let t = 0;
+      this.prgoressT = 0;
       this.progressTimer = setInterval(() => {
         if (this.progress >= 70) {
           clearInterval(this.progressTimer);
           return;
         }
-        this.progress = this.easeOutCubic(t) * 100;
-        t += 0.006;
+        this.progress = this.easeOutCubic(this.prgoressT) * 100;
+        this.prgoressT += 0.006;
       }, 20);
     },
     startProgressEndTimer() {
-      let t = 0;
+
       return new Promise(resolve => {
         this.progressEndTimer = setInterval(() => {
           if (this.progress >= 100) {
@@ -100,8 +99,8 @@ export default {
             resolve();
             return;
           }
-          this.progress = this.easeOutCubic(t) * 100;
-          t += 0.008;
+          this.progress = this.easeOutCubic(this.prgoressT) * 100;
+          this.prgoressT += 0.008;
         }, 20);
       });
     }
