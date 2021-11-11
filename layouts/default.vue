@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Preloader />
     <AHeader />
     <div data-scroll-container class="smooth-scroll">
       <transition @enter="onEnter" @leave="onLeave" mode="out-in">
