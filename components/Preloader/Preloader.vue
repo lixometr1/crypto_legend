@@ -70,6 +70,7 @@ export default {
         imagesloaded(document.body, () => {
           clearInterval(this.progressTimer);
           this.startProgressEndTimer().then(() => {
+            console.log("wtf")
             resolve();
           });
         });
@@ -80,27 +81,28 @@ export default {
       return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2;
     },
     startProgressTimer() {
-      this.prgoressT = 0;
+      this.progressT = 0;
       this.progressTimer = setInterval(() => {
         if (this.progress >= 70) {
           clearInterval(this.progressTimer);
           return;
         }
-        this.progress = this.easeOutCubic(this.prgoressT) * 100;
-        this.prgoressT += 0.006;
+        this.progress = this.easeOutCubic(this.progressT) * 100;
+        this.progressT += 0.006;
       }, 20);
     },
     startProgressEndTimer() {
 
       return new Promise(resolve => {
         this.progressEndTimer = setInterval(() => {
-          if (this.progress >= 100) {
+          console.log('wtf', this.progress)
+          if (this.progress >= 99.9) {
             clearInterval(this.progressEndTimer);
             resolve();
             return;
           }
-          this.progress = this.easeOutCubic(this.prgoressT) * 100;
-          this.prgoressT += 0.008;
+          this.progress = this.easeOutCubic(this.progressT) * 100;
+          this.progressT += 0.007;
         }, 20);
       });
     }
