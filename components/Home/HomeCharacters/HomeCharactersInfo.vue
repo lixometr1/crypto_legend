@@ -116,7 +116,7 @@ export default {
 .home-characters-info {
   @apply md:hidden;
   &__skills {
-    @apply mt-[4.5rem] overflow-hidden;
+    @apply mt-[4.5rem];
     &-title {
       @apply flex space-x-2 text-2xl uppercase mb-5;
     }
