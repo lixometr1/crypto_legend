@@ -45,20 +45,23 @@ export default {
         }
       });
       tl.set(el, {
-        scaleY: "0.5%",
-        top: "50%",
-        transform: "translateY(-50%)",
-        overflow: "hidden"
+        // scaleY: "0.5%",
+        // top: "50%",
+        // transform: "translateY(-50%)",
+        // translateY: "-50%",
+        overflow: "hidden",
       });
 
       tl.from(el, {
-        scaleX: 0,
+
+        scaleY: 0,
         ease: "Power1.easeIn"
       });
-      tl.to(el, {
-        scaleY: "100%",
-        ease: "Power2.easeOut"
-      });
+      // tl.to(el, {
+      //   scaleY: "100%",
+      //   // translateY: "-50%",
+      //   ease: "Power2.easeOut"
+      // });
       tl.from(".menu-title", {
         y: 20,
         opacity: 0

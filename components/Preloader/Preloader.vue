@@ -70,7 +70,6 @@ export default {
         imagesloaded(document.body, () => {
           clearInterval(this.progressTimer);
           this.startProgressEndTimer().then(() => {
-            console.log("wtf")
             resolve();
           });
         });
@@ -95,7 +94,6 @@ export default {
 
       return new Promise(resolve => {
         this.progressEndTimer = setInterval(() => {
-          console.log('wtf', this.progress)
           if (this.progress >= 99.9) {
             clearInterval(this.progressEndTimer);
             resolve();
