@@ -117,11 +117,14 @@ export default {
   &-info {
     @apply absolute right-[200px] top-0 bottom-0 pt-[100px] pl-4
        flex-center flex-col 
-      lg:right-auto lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:pt-0
-      sm:justify-start sm:pt-[100px];
+       lg:right-[120px]
+       md:right-[100px]
+       sm:right-[30px]
+      xs:justify-start xs:right-auto xs:left-1/2 xs:transform xs:-translate-x-1/2 xs:pt-[100px];
+
   }
   &-logo {
-    @apply mb-12;
+    @apply mb-12 lg:w-[120px] lg:mb-9 md:mb-7 md:w-[90px] xs:hidden;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 export default [
   {
-    image: require("@/assets/img/second_slider/1.jpeg"),
+    image: require("@/assets/img/about_slider/1.png"),
     title: "JUST PLAY",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet \
@@ -8,7 +8,7 @@ export default [
         veniam consequat sunt nostrud amet."
   },
   {
-    image: require("@/assets/img/first_bg.jpeg"),
+    image: require("@/assets/img/about_slider/2.png"),
     title: "JUST PLAY NOW",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet \
@@ -16,7 +16,7 @@ export default [
         veniam consequat sunt nostrud amet."
   },
   {
-    image: require("@/assets/img/third_bg.jpg"),
+    image: require("@/assets/img/about_slider/3.png"),
     title: "JUST PLAY 3",
     description: "Some long description."
   }

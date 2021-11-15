@@ -33,7 +33,7 @@ export default {
   mixins: [HomeSectionMixin],
   data() {
     return {
-      bgSlider: [require("@/assets/img/characters_bg.jpg")],
+      bgSlider: [require("@/assets/img/characters_bg.png")],
       activeFraction: "water",
       activeSlideIdx: 0,
       items: charactersData

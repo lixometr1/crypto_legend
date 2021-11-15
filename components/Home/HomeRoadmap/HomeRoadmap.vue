@@ -97,7 +97,7 @@ export default {
 
 <style lang="postcss">
 .home-roadmap {
-  background: url(~@/assets/img/third_bg.jpg) center center no-repeat;
+  background: url(~@/assets/img/roadmap_bg.png) center center no-repeat;
   background-size: cover;
   @apply flex flex-col items-stretch overflow-hidden;
   &__content {
