@@ -1,6 +1,6 @@
 <template>
-  <div class="home-screen-first home-screen" id="first-screen">
-    <div class="container">
+  <div class="home-screen-first home-screen" id="first-screen" ref="container">
+    <div class="container relative z-20">
       <div class="home-screen-first__inner">
         <h1 ref="title">Crypto legend</h1>
         <div class="home-screen-first__buttons">
@@ -12,6 +12,18 @@
         </div>
       </div>
       <scroll-down />
+    </div>
+    <div class="home-screen-first__bg">
+      <img
+        src="@/assets/img/first_bg_front.png"
+        alt="front"
+        class="home-screen-first__bg-front"
+      />
+      <img
+        src="@/assets/img/first_bg_back.png"
+        alt="back"
+        class="home-screen-first__bg-back"
+      />
     </div>
   </div>
 </template>
@@ -40,6 +52,30 @@ export default {
       start: "top 5%",
       trigger: ".home-screen-first"
     });
+    this.paralax()
+  },
+  methods: {
+    paralax() {
+      const container = this.$refs.container;
+
+      const parallaxIt = (e, target, movement) => {
+        const rect = container.getBoundingClientRect();
+        const containerW = container.offsetWidth;
+        const containerH = container.offsetHeight;
+        var relX = e.pageX - rect.left;
+        var relY = e.pageY - rect.top;
+
+        gsap.to(target, {
+          x: ((relX - containerW / 2) / containerW) * movement,
+          y: ((relY - containerH / 2) / containerH) * movement,
+          duration: 0.7
+        });
+      };
+      container.addEventListener("mousemove", function(e) {
+        parallaxIt(e, ".home-screen-first__bg-front", 70);
+        parallaxIt(e, ".home-screen-first__bg-back", -90);
+      });
+    }
   }
 };
 </script>
@@ -47,8 +83,8 @@ export default {
 <style lang="postcss">
 .home-screen-first {
   @apply flex-center;
-  background: url(~@/assets/img/first_bg.jpeg) center center no-repeat;
-  background-size: cover;
+  /* background: url(~@/assets/img/first_bg.jpeg) center center no-repeat; */
+  /* background-size: cover; */
   h1 {
     @apply uppercase text-center;
   }
@@ -56,6 +92,19 @@ export default {
   }
   &__buttons {
     @apply flex-center mt-20 w-full space-x-12 xxs:flex-col xxs:items-center xxs:space-x-0 xxs:space-y-4;
+  }
+  &__bg {
+    @apply absolute inset-0 z-0;
+    &-front,
+    &-back {
+      @apply absolute inset-0 object-cover h-full w-full transform scale-110;
+    }
+    &-front {
+      @apply z-20;
+    }
+    &-back {
+      @apply z-10;
+    }
   }
 }
 </style>
