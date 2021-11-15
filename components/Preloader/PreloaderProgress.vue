@@ -26,15 +26,24 @@ export default {
 
 <style lang="postcss">
 .preloader-progress {
-  @apply h-[5px] w-[370px] bg-white xs:w-[285px];
+  @apply h-[5px] w-[370px] bg-white 
+  lg:w-[305px]
+  md:w-[240px]
+  sm:w-[220px]
+   ;
   &__wrapper {
   }
   &__active {
     @apply bg-primary h-full;
   }
   &__title {
-    @apply mb-4 text-5xl font-semibold text-center xs:text-3xl;
+    @apply mb-4 text-5xl font-semibold text-center lg:text-[34px] md:text-[28px]
+    sm:text-[24px];
     letter-spacing: 25px;
+    @screen md {
+      letter-spacing: 19px;
+    }
+  
   }
 }
 </style>
