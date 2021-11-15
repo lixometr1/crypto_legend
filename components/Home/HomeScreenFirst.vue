@@ -82,7 +82,7 @@ export default {
 
 <style lang="postcss">
 .home-screen-first {
-  @apply flex-center;
+  @apply flex-center overflow-hidden;
   /* background: url(~@/assets/img/first_bg.jpeg) center center no-repeat; */
   /* background-size: cover; */
   h1 {
