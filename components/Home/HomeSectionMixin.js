@@ -9,5 +9,6 @@ export default {
     beforeEnter() {
       return true;
     },
+    afterEnter() {}
   }
 };

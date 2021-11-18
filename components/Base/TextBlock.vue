@@ -2,7 +2,9 @@
   <div class="text-block">
     <h2 class="text-block__title" ref="title">{{ title }}</h2>
     <div class="text-block__description" ref="description">
-      {{ description }}
+      <slot name="description">
+        {{ description }}
+      </slot>
     </div>
   </div>
 </template>

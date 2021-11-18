@@ -2,7 +2,7 @@
   <transition @enter="enter" @leave="leave" mode="out-in" :css="false">
     <div class="home-characters-info" :key="animationKey">
       <TextBlock :title="name" :description="description" ref="textBlock" />
-      <div class="home-characters-info__skills">
+      <!-- <div class="home-characters-info__skills">
         <div class="home-characters-info__skills-title">
           <svgSwords width="18" /> <span>SKILLS</span>
         </div>
@@ -15,7 +15,7 @@
             <img :src="skill.image" alt="image" width="80" height="80" />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </transition>
 </template>
@@ -41,7 +41,7 @@ export default {
     leave: function(el, done) {
       const title = this.$refs.textBlock.$refs.title;
       const description = this.$refs.textBlock.$refs.description;
-      const skillsItems = this.$refs.skillsItems;
+      // const skillsItems = this.$refs.skillsItems;
 
       const splitTextTitle = new SplitTextJS(title);
       const splitTextDescription = new SplitTextJS(description);
@@ -64,19 +64,19 @@ export default {
         },
         "<"
       );
-      tl.to(
-        skillsItems.children,
-        {
-          x: -200,
-          opacity: 0
-        },
-        "<"
-      );
+      // tl.to(
+      //   skillsItems.children,
+      //   {
+      //     x: -200,
+      //     opacity: 0
+      //   },
+      //   "<"
+      // );
     },
     enter(el, done) {
       const title = this.$refs.textBlock.$refs.title;
       const description = this.$refs.textBlock.$refs.description;
-      const skillsItems = this.$refs.skillsItems;
+      // const skillsItems = this.$refs.skillsItems;
       const splitTextTitle = new SplitTextJS(title);
       const splitTextDescription = new SplitTextJS(description);
       const tl = gsap.timeline({
@@ -98,15 +98,15 @@ export default {
         },
         "<"
       );
-      tl.from(
-        skillsItems.children,
-        {
-          stagger: 0.05,
-          y: 50,
-          opacity: 0
-        },
-        "<"
-      );
+      // tl.from(
+      //   skillsItems.children,
+      //   {
+      //     stagger: 0.05,
+      //     y: 50,
+      //     opacity: 0
+      //   },
+      //   "<"
+      // );
     }
   }
 };
