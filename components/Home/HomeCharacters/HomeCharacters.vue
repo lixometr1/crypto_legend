@@ -111,6 +111,9 @@ export default {
     });
   },
   methods: {
+    beforeEnter() {
+      this.$store.dispatch("changePrimaryColor", "#236FE1");
+    },
     onEnter(el, done) {
       const tl = gsap.timeline({
         onComplete: done

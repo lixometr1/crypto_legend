@@ -3,28 +3,44 @@
     <div class="container h-full">
       <three-slider :items="imageSlider" ref="slider" />
       <div class="home-about__content">
-        <div class="home-about__texts">
-          <transition @enter="onEnter" @leave="onLeave" mode="out-in">
-            <TextBlock
-              :title="activeSlideData.title"
-              :description="activeSlideData.description"
-              ref="textBlock"
-              :key="activeSlide"
-            />
-          </transition>
-        </div>
-        <div class="home-about__progress">
-          <div class="home-about__progress-num">0{{ activeSlide + 1 }}</div>
-          <div class="home-about__progress-line">
-            <div
-              class="home-about__progress-active"
-              :style="{ width: progress + '%' }"
-            ></div>
+        <div class="home-about__inner">
+          <div class="home-about__texts">
+            <transition @enter="onEnter" @leave="onLeave" mode="out-in">
+              <TextBlock
+                :title="activeSlideData.title"
+                ref="textBlock"
+                :key="activeSlide"
+              >
+                <template #description>
+                  <div>
+                    <ul class="home-about__list">
+                      <li
+                        class="home-about__list-item"
+                        v-for="(item, idx) in activeSlideData.description"
+                        :key="idx"
+                      >
+                        <svgListIcon />
+                        <span>{{ item }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </template>
+              </TextBlock>
+            </transition>
           </div>
+          <div class="home-about__progress">
+            <div class="home-about__progress-num">0{{ activeSlide + 1 }}</div>
+            <div class="home-about__progress-line">
+              <div
+                class="home-about__progress-active"
+                :style="{ width: progress + '%' }"
+              ></div>
+            </div>
 
-          <div class="home-about__progress-num">0{{ totalSlides }}</div>
+            <div class="home-about__progress-num">0{{ totalSlides }}</div>
+          </div>
         </div>
-        <scroll-down />
+        <scroll-down text="roadmap" @click="scrollNext" />
       </div>
     </div>
   </div>
@@ -39,9 +55,10 @@ import slidesData from "./home-about-data";
 import { gsap } from "gsap";
 import SplitTextJS from "split-text-js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import svgListIcon from "@/assets/icons/list_icon.svg?inline";
 export default {
   mixins: [HomeSectionMixin],
-  components: { AButton, ScrollDown, ThreeSlider },
+  components: { AButton, ScrollDown, ThreeSlider, svgListIcon },
   data: () => ({
     slides: slidesData,
     activeSlide: 0,
@@ -63,6 +80,9 @@ export default {
     }
   },
   methods: {
+    scrollNext() {
+      this.$nuxt.$emit("scrollNextSection");
+    },
     beforeEnter() {
       const tl = gsap.timeline();
       const title = this.$refs.container.querySelector(".text-block__title");
@@ -87,7 +107,7 @@ export default {
         start: "top 5%",
         animation: tl
       });
-      console.log('etner')
+      this.$store.dispatch("changePrimaryColor", "#F32121");
     },
     onEnter(el, done) {
       const tl = gsap.timeline({ onComplete: done });
@@ -161,8 +181,10 @@ export default {
   &__content {
     @apply relative z-30 flex flex-col justify-center items-end h-full md:items-center;
   }
+  &__inner {
+    @apply max-w-[560px];
+  }
   &__texts {
-    @apply text-right max-w-[560px];
     &-title {
       @apply mb-3;
     }
@@ -174,6 +196,15 @@ export default {
     }
     &-active {
       @apply bg-primary h-full bg-opacity-100 transition-all duration-500;
+    }
+  }
+  &__list {
+    @apply space-y-4;
+    &-item {
+      @apply flex-y-center;
+      svg {
+        @apply block w-6 mr-2 flex-shrink-0;
+      }
     }
   }
 }

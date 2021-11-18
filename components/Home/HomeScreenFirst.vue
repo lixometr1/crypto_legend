@@ -2,16 +2,17 @@
   <div class="home-screen-first home-screen" id="first-screen" ref="container">
     <div class="container relative z-20">
       <div class="home-screen-first__inner">
-        <h1 ref="title">Crypto legend</h1>
+        <div class="home-screen-first__title">
+          <img src="@/assets/img/first_logo.svg" alt="" />
+        </div>
         <div class="home-screen-first__buttons">
-          <a-button type="primary" size="lg">go to play</a-button>
+          <a-button type="primary" size="lg">SUBSCRIBE</a-button>
           <a-button type="blur" size="lg">
-            <span class="sm:hidden">WATCH TRAILER</span>
-            <span class="hidden sm:inline-block">WATCH VIDEO</span>
+            <span >TRAILER</span>
           </a-button>
         </div>
       </div>
-      <scroll-down />
+      <scroll-down text="about project" @click="scrollNext" />
     </div>
     <div class="home-screen-first__bg">
       <img
@@ -39,26 +40,25 @@ export default {
   mixins: [HomeSectionMixin],
   components: { AButton, ScrollDown },
   mounted() {
-    const title = this.$refs.title;
-    const splitTextTitle = new SplitTextJS(title);
     const tl = gsap.timeline();
-    tl.from(splitTextTitle.chars, {
-      stagger: 0.04,
-      y: 50,
-      opacity: 0
-    });
+
     ScrollTrigger.create({
       animation: tl,
       start: "top 5%",
       trigger: ".home-screen-first"
     });
-    this.paralax()
+    this.paralax();
   },
   methods: {
+    scrollNext() {
+      this.$nuxt.$emit("scrollNextSection");
+    },
+
     paralax() {
       const container = this.$refs.container;
 
       const parallaxIt = (e, target, movement) => {
+        if (window.matchMedia("(max-width: 992px)").matches) return;
         const rect = container.getBoundingClientRect();
         const containerW = container.offsetWidth;
         const containerH = container.offsetHeight;
@@ -72,7 +72,7 @@ export default {
         });
       };
       container.addEventListener("mousemove", function(e) {
-        parallaxIt(e, ".home-screen-first__bg-front", 70);
+        // parallaxIt(e, ".home-screen-first__bg-front", 70);
         parallaxIt(e, ".home-screen-first__bg-back", -90);
       });
     }
@@ -82,16 +82,16 @@ export default {
 
 <style lang="postcss">
 .home-screen-first {
-  @apply flex-center overflow-hidden;
+  @apply flex overflow-hidden pt-[90px];
   /* background: url(~@/assets/img/first_bg.jpeg) center center no-repeat; */
   /* background-size: cover; */
-  h1 {
-    @apply uppercase text-center;
-  }
   &__inner {
   }
+  &__title {
+    @apply max-w-[1000px] mt-[110px] mx-auto lg:w-[680px] md:w-[660px] md:mt-[80px] sm:w-full;
+  }
   &__buttons {
-    @apply flex-center mt-20 w-full space-x-12 xxs:flex-col xxs:items-center xxs:space-x-0 xxs:space-y-4;
+    @apply flex-center mt-8 w-full space-x-12 xxs:flex-col xxs:items-center xxs:space-x-0 xxs:space-y-4;
   }
   &__bg {
     @apply absolute inset-0 z-0;

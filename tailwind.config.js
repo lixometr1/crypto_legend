@@ -20,7 +20,7 @@ module.exports = {
       black: "#000000"
     },
     fontFamily: {
-      main: ["Open Sans"],
+      main: ["Montserrat"],
       second: ["Michroma"]
     },
     screens: {

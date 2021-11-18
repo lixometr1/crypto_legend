@@ -31,11 +31,13 @@ export default {
     this.sections = document.querySelectorAll(".home-screen-full");
     this.$locoScroll.scrollTo(0);
     this.startSectionScroll();
+    this.$nuxt.$on("scrollNextSection", this.scrollNextSection);
   },
   beforeDestroy() {
     this.stopFreeScroll();
     this.stopSectionScroll();
-    this.$locoScroll.start()
+    this.$locoScroll.start();
+    this.$nuxt.$off("scrollNextSection", this.scrollNextSection);
   },
   computed: {
     activeSectionComp() {
@@ -73,6 +75,7 @@ export default {
       if (this.activeScreen >= this.sections.length - 1) return;
       if (!this.activeSectionComp.beforeLeaveDown()) return;
       this.activeScreen++;
+      this.$store.dispatch("resetPrimaryColor");
       this.activeSectionComp.beforeEnter();
       this.scrollToActiveSection();
     },
@@ -81,6 +84,7 @@ export default {
 
       if (!this.activeSectionComp.beforeLeaveUp()) return;
       this.activeScreen--;
+      this.$store.dispatch("resetPrimaryColor");
       this.activeSectionComp.beforeEnter();
 
       this.scrollToActiveSection();
@@ -154,12 +158,14 @@ export default {
       this.scrollType = "section";
       this.$locoScroll.off("scroll", this.freeScrollListener);
     },
+
     afterSectionEnter() {
       if (this.activeScreen >= this.sections.length - 1) {
         // last screen
         this.stopSectionScroll();
         this.startFreeScroll();
       }
+      this.activeSectionComp.afterEnter();
     }
   }
 };

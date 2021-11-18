@@ -20,7 +20,7 @@ import imagesloaded from "imagesloaded";
 import { gsap } from "gsap";
 export default {
   data: () => ({
-    isShown: true,
+    isShown: process.env.NODE_ENV === "development" ? false : true,
     progress: 0
   }),
   mounted() {
@@ -42,10 +42,14 @@ export default {
         opacity: 0,
         x: -100
       });
-      tl.to(".preloader-info", {
-        x: 100,
-        opacity: 0
-      }, '<');
+      tl.to(
+        ".preloader-info",
+        {
+          x: 100,
+          opacity: 0
+        },
+        "<"
+      );
       tl.to(el, {
         xPercent: 100
         // opacity: 0
@@ -91,7 +95,6 @@ export default {
       }, 20);
     },
     startProgressEndTimer() {
-
       return new Promise(resolve => {
         this.progressEndTimer = setInterval(() => {
           if (this.progress >= 99.9) {
@@ -121,7 +124,6 @@ export default {
        md:right-[100px]
        sm:right-[30px]
       xs:justify-start xs:right-auto xs:left-1/2 xs:transform xs:-translate-x-1/2 xs:pt-[100px];
-
   }
   &-logo {
     @apply mb-12 lg:w-[120px] lg:mb-9 md:mb-7 md:w-[90px] xs:hidden;
