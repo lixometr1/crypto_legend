@@ -33,7 +33,7 @@ export default {
 <style lang="postcss">
 .app-button {
   @apply h-10  inline-flex items-center justify-center 
-        text-center font-second text-sm uppercase transition-all sm:text-[0.625rem]
+        text-center font-main text-sm uppercase transition-all sm:text-[0.625rem]
         xxs:h-8;
   letter-spacing: 1.6px;
   @screen sm {

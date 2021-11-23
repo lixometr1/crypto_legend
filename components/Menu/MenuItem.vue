@@ -31,7 +31,7 @@ export default {
 
 <style lang="postcss">
 .menu-item {
-  @apply relative py-4.5 text-2xl flex items-center w-[290px] hover:text-primary transition-colors;
+  @apply relative py-4.5 text-2xl flex items-center w-[290px] hover:text-primary transition-colors xs:w-full;
   svg {
     @apply ml-auto;
   }

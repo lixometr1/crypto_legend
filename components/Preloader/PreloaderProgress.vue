@@ -1,6 +1,6 @@
 <template>
   <div class="preloader-progress__wrapper">
-    <div class="preloader-progress__title">
+    <div class="preloader-progress__title" v-if="showTitle">
       LOADING
     </div>
     <div class="preloader-progress">
@@ -19,7 +19,8 @@ export default {
       type: Boolean,
       default: false
     },
-    progress: Number
+    progress: Number,
+    showTitle: Boolean
   }
 };
 </script>
@@ -29,8 +30,7 @@ export default {
   @apply h-[5px] w-[370px] bg-white 
   lg:w-[305px]
   md:w-[240px]
-  sm:w-[220px]
-   ;
+  sm:w-[220px];
   &__wrapper {
   }
   &__active {
@@ -43,7 +43,6 @@ export default {
     @screen md {
       letter-spacing: 19px;
     }
-  
   }
 }
 </style>

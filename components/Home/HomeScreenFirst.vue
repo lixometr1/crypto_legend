@@ -6,9 +6,18 @@
           <img src="@/assets/img/first_logo.svg" alt="" />
         </div>
         <div class="home-screen-first__buttons">
-          <a-button type="primary" size="lg">SUBSCRIBE</a-button>
-          <a-button type="blur" size="lg">
-            <span >TRAILER</span>
+          <a-button
+            type="primary"
+            size="lg"
+            class="home-screen-first__btn home-screen-first__btn-primary"
+            >SUBSCRIBE</a-button
+          >
+          <a-button
+            type="blur"
+            size="lg"
+            class="home-screen-first__btn home-screen-first__btn-secon"
+          >
+            <span>TRAILER</span>
           </a-button>
         </div>
       </div>
@@ -91,7 +100,7 @@ export default {
     @apply max-w-[1000px] mt-[110px] mx-auto lg:w-[680px] md:w-[660px] md:mt-[80px] sm:w-full;
   }
   &__buttons {
-    @apply flex-center mt-8 w-full space-x-12 xxs:flex-col xxs:items-center xxs:space-x-0 xxs:space-y-4;
+    @apply flex-center mt-8 w-full space-x-12  xs:space-x-2;
   }
   &__bg {
     @apply absolute inset-0 z-0;
@@ -104,6 +113,20 @@ export default {
     }
     &-back {
       @apply z-10;
+    }
+  }
+  &__btn.app-button {
+    @apply h-[40px] w-[220px] font-semibold text-lg md:w-[180px] md:h-[35px] md:text-sm sm:w-[150px] sm:h-[30px] sm:text-xs;
+    letter-spacing: 3.6px;
+    box-shadow: 0px 20px 15px -15px rgba(0, 0, 0, 0.3);
+  }
+  &__btn {
+    &-primary {
+      @apply text-[#010103] !important;
+      background: linear-gradient(91.8deg, #c47751 0%, #987184 100%);
+    }
+    &-second {
+      @apply text-white border-2 border-white !important;
     }
   }
 }

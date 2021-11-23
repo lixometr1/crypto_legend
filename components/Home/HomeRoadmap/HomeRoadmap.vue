@@ -27,12 +27,11 @@
             </div>
           </template>
         </TextBlock>
-        <a href="javascript:void(0)" class="home-roadmap__skip" @click.prevent>
-          <svgScrollDown width="10" />
-          <span>
-            SKIP
-          </span>
-        </a>
+        <ScrollDown
+          text="HEROES"
+          class="home-roadmap__scroll-down"
+          @click.prevent="scrollNext"
+        />
       </div>
     </transition>
 
@@ -64,6 +63,9 @@ export default {
     }
   },
   methods: {
+    scrollNext() {
+      this.$nuxt.$emit("scrollNextSection");
+    },
     scrollNext() {
       this.$nuxt.$emit("scrollNextSection");
     },
@@ -164,6 +166,9 @@ export default {
         @apply w-6 mr-2.5 -ml-1;
       }
     }
+  }
+  .scroll-down {
+    @apply bottom-[140px] lg:bottom-[100px] md:bottom-[80px];
   }
 }
 </style>
