@@ -179,7 +179,7 @@ export default {
 <style lang="postcss">
 .home-about {
   &__content {
-    @apply relative z-30 flex flex-col justify-center items-end h-full md:items-center;
+    @apply relative z-30 flex flex-col justify-center items-end h-full xs:items-start;
   }
   &__inner {
     @apply max-w-[560px];

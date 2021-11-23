@@ -12,12 +12,26 @@
             />
           </div>
           <div class="home-characters__right">
+            <transition
+              @enter="onImageEnter"
+              @leave="onImageLeave"
+              mode="out-in"
+            >
+              <img
+                ref="image"
+                :src="activeSlide.image"
+                alt="personage"
+                class="home-characters__image"
+                :key="activeSlide.image"
+              />
+            </transition>
+
             <HomeCharactersSlider
               :items="activeCharacters"
               v-model="activeSlideIdx"
             />
           </div>
-          <ScrollDown />
+          <ScrollDown text="ecosystem" />
         </div>
       </transition>
     </div>
@@ -66,6 +80,7 @@ export default {
     const slider = this.$refs.container.querySelector(
       ".home-characters-slider"
     );
+    const image = this.$refs.container.querySelector(".home-characters__image");
 
     tl.from(fractions, {
       y: -50,
@@ -111,6 +126,19 @@ export default {
     });
   },
   methods: {
+    onImageEnter(el, done) {
+      const tl = gsap.timeline({ onComplete: done });
+      console.log(el);
+      tl.from(el, {
+        scale: 0
+      });
+    },
+    onImageLeave(el, done) {
+      const tl = gsap.timeline({ onComplete: done });
+      tl.to(el, {
+        scale: 0
+      });
+    },
     beforeEnter() {
       this.$store.dispatch("changePrimaryColor", "#236FE1");
     },
@@ -122,6 +150,15 @@ export default {
         opacity: 0,
         x: 100
       });
+      tl.from(
+        ".home-characters__image",
+        {
+          yPercent: 100,
+          opacity: 0,
+          ease: "Power2.easeInOut"
+        },
+        "<"
+      );
     },
     onLeave(el, done) {
       const tl = gsap.timeline({
@@ -131,6 +168,15 @@ export default {
         opacity: 0,
         x: 100
       });
+      tl.to(
+        ".home-characters__image",
+        {
+          x: 200,
+          opacity: 0,
+          ease: "Power2.easeInOut"
+        },
+        "<"
+      );
     }
   },
   watch: {
@@ -149,15 +195,25 @@ export default {
 
 <style lang="postcss">
 .home-characters {
-  @apply md:pb-[100px];
+  @apply md:pb-[100px] overflow-hidden;
   &__row {
-    @apply flex-y-center justify-between h-full w-full md:flex-col md:justify-end md:items-stretch;
+    @apply flex-y-center justify-between h-full w-full md:flex-col md:justify-end md:items-stretch
+    md:pt-[120px];
   }
   &__left {
-    @apply flex flex-col items-stretch md:items-center;
+    @apply flex flex-col items-stretch relative z-20;
   }
   &__right {
-    @apply min-h-0;
+    @apply min-h-0 md:flex md:flex-col md:items-end;
+  }
+  &__image {
+    @apply absolute bottom-0 right-[200px] w-[900px] z-0 xl:w-[800px] xl:right-[120px]
+    lg:right-[-100px] 
+     md:max-w-none md:right-auto md:left-1/2 md:transform md:-translate-x-1/2
+     xs:w-[500px];
+  }
+  .scroll-down {
+    @apply bottom-[20px] sm:bottom-[30px];
   }
 }
 </style>

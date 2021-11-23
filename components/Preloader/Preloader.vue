@@ -1,7 +1,7 @@
 <template>
   <transition @enter="onEnter" @leave="onLeave">
     <div class="preloader" v-if="isShown">
-      <video autoplay muted loop>
+      <video autoplay muted loop playsinline class="pointer-events-none">
         <source src="@/assets/video/preloader.mp4" />
       </video>
       <div class="preloader-info">
@@ -9,7 +9,7 @@
           <img src="@/assets/img/preloader_logo.png" alt="logo" />
         </div>
 
-        <PreloaderProgress :progress="progress" />
+        <PreloaderProgress :showTitle="showTitle" :progress="progress" />
       </div>
     </div>
   </transition>
@@ -20,8 +20,9 @@ import imagesloaded from "imagesloaded";
 import { gsap } from "gsap";
 export default {
   data: () => ({
-    isShown: process.env.NODE_ENV === "development" ? false : true,
-    progress: 0
+    isShown:  true,
+    progress: 0,
+    showTitle: false
   }),
   mounted() {
     const resolvers = [];
@@ -30,8 +31,13 @@ export default {
     Promise.all(resolvers).then(() => {
       this.isShown = false;
     });
+    this.waitingFonts();
   },
   methods: {
+    async waitingFonts() {
+      await document.fonts.ready;
+      this.showTitle = true;
+    },
     onEnter(el, done) {
       // const tl = gsap.timeline({ onComplete: done });
       done();

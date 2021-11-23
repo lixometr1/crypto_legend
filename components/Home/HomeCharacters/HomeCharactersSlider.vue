@@ -34,21 +34,12 @@ export default {
     const vm = this;
     return {
       swiperOptions: {
-        direction: "horizontal",
         slidesPerView: "auto",
         centeredSlides: true,
         centeredSlidesBounds: false,
         slideToClickedSlide: true,
-        spaceBetween: 35,
+        spaceBetween: 20,
         threshold: 5,
-        breakpoints: {
-          992: {
-            centeredSlidesBounds: false,
-
-            direction: "vertical",
-            spaceBetween: 20
-          }
-        },
         on: {
           slideChange() {
             vm.$emit("input", this.realIndex);
@@ -62,7 +53,7 @@ export default {
 
 <style lang="postcss">
 .home-characters-slider {
-  @apply h-[580px] w-[8rem] md:w-full md:h-auto;
+  @apply h-[580px] w-[8rem];
   .swiper-container {
     @apply max-h-full;
   }

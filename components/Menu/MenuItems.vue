@@ -41,7 +41,7 @@ export default {
 
 <style lang="postcss">
 .menu-items {
-  @apply flex flex-col items-start justify-start overflow-auto min-h-0;
+  @apply sm:w-full flex flex-col items-start justify-start overflow-auto min-h-0;
   &.sub-open {
     @apply md:hidden;
   }

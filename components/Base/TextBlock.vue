@@ -20,7 +20,7 @@ export default {
 
 <style lang="postcss">
 .text-block {
-  @apply max-w-[560px] md:text-center md:mx-auto;
+  @apply max-w-[560px];
   &__title {
     @apply mb-3;
   }
