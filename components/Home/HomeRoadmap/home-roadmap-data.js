@@ -8,6 +8,7 @@ export default [
       "Testing blockchain dependencies"
     ]
   },
+
   {
     title: "Q4/2021",
     pros: ["Creating a WEB Site", "Issue Whitepapper", "Impulse Trailer"],
@@ -32,7 +33,8 @@ export default [
       "PVP tournament",
       "Guilds",
       "leaderboard"
-    ]
+    ],
+    showGameMechanic: true
   },
   {
     title: "Q3+/2022-2023 ",
@@ -43,6 +45,7 @@ export default [
       "New planets",
       "New races",
       "Mobile version"
-    ]
+    ],
+    showGameMechanic: true
   }
 ];

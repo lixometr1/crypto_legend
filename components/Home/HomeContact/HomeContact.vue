@@ -4,9 +4,10 @@
       <div class="home-contact__row">
         <div class="home-contact__content">
           <div class="home-contact__title">
-            <h2 class="uppercase font-normal">Join Our Community</h2>
+            <h2 class="uppercase font-normal">Join Our Airdrop</h2>
           </div>
-          <SocBtns class="home-contact__soc" />
+          <a href="#" class="home-contact__btn">JOIN AIRDROP</a>
+          <!-- <SocBtns class="home-contact__soc" /> -->
         </div>
         <div class="home-contact__image">
           <img src="@/assets/img/contact_image.png" alt="contact_image" />
@@ -17,9 +18,9 @@
 </template>
 
 <script>
-import HomeSectionMixin from '@/components/Home/HomeSectionMixin'
+import HomeSectionMixin from "@/components/Home/HomeSectionMixin";
 export default {
-  mixins: [HomeSectionMixin],
+  mixins: [HomeSectionMixin]
 };
 </script>
 
@@ -30,7 +31,7 @@ export default {
     @apply flex-y-center h-full md:flex-col;
   }
   &__content {
-    @apply w-[570px] flex-shrink-0;
+    @apply w-[570px] flex-shrink-0 md:text-center;
   }
   &__title {
     @apply mb-5 md:text-center;
@@ -47,6 +48,11 @@ export default {
     @apply right-0 top-0 max-h-full max-w-[1150px] 
         lg:transform lg:-translate-x-24 lg:w-[800px] lg:max-w-none lg:flex-shrink-0 
         md:w-full md:transform-none md:mt-2;
+  }
+  &__btn {
+    @apply font-bold text-2xl text-white px-5 py-3 mt-3 inline-block md:text-lg md:py-2 sm:text-base sm:px-4;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #DC2D2D 0%, #AF0F0F 100%);
   }
 }
 </style>

@@ -95,6 +95,7 @@ export default {
   /* background: url(~@/assets/img/first_bg.jpeg) center center no-repeat; */
   /* background-size: cover; */
   &__inner {
+    @apply transform translate-x-[33px] md:transform-none;
   }
   &__title {
     @apply max-w-[1000px] mt-[110px] mx-auto lg:w-[680px] md:w-[660px] md:mt-[80px] sm:w-full;

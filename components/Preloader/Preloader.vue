@@ -20,7 +20,7 @@ import imagesloaded from "imagesloaded";
 import { gsap } from "gsap";
 export default {
   data: () => ({
-    isShown:  true,
+    isShown: process.env.NODE_ENV !== "development",
     progress: 0,
     showTitle: false
   }),

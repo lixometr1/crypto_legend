@@ -16,7 +16,9 @@
 import svgTwitter from "@/assets/icons/twitter.svg?inline";
 import svgFaceook from "@/assets/icons/facebook.svg?inline";
 import svgTelegram from "@/assets/icons/telegram.svg?inline";
-import svgInstagram from "@/assets/icons/instagram.svg?inline";
+// import svgInstagram from "@/assets/icons/instagram.svg?inline";
+import svgDiscord from "@/assets/icons/discord.svg?inline";
+import svgReddit from "@/assets/icons/reddit.svg?inline";
 export default {
   components: { svgTwitter },
   data: () => ({
@@ -34,7 +36,11 @@ export default {
         link: "#",
       },
       {
-        icon: svgInstagram,
+        icon: svgDiscord,
+        link: "#",
+      },
+      {
+        icon: svgReddit,
         link: "#",
       },
     ],

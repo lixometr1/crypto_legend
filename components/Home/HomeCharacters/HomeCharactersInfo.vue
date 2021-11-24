@@ -28,7 +28,7 @@ import SplitTextJS from "split-text-js";
 export default {
   components: { svgSwords },
   props: {
-    animationKey: String,
+    animationKey: [String, Number],
     image: String,
     name: String,
     description: String,
@@ -43,24 +43,24 @@ export default {
       const description = this.$refs.textBlock.$refs.description;
       // const skillsItems = this.$refs.skillsItems;
 
-      const splitTextTitle = new SplitTextJS(title);
-      const splitTextDescription = new SplitTextJS(description);
+      // const splitTextTitle = new SplitTextJS(title);
+      // const splitTextDescription = new SplitTextJS(description);
       const tl = gsap.timeline({
         onComplete: () => {
           done();
         }
       });
-      tl.to(splitTextTitle.chars, {
-        stagger: 0.03,
+      tl.to(title, {
         x: -200,
-        opacity: 0
+        opacity: 0,
+        ease: "Power2.easeInOut"
       });
       tl.to(
-        splitTextDescription.words,
+        description,
         {
-          stagger: 0.01,
-          x: -40,
-          opacity: 0
+          x: 200,
+          opacity: 0,
+          ease: "Power2.easeInOut"
         },
         "<"
       );
@@ -84,17 +84,17 @@ export default {
           done();
         }
       });
-      tl.from(splitTextTitle.chars, {
-        stagger: 0.03,
+      tl.from(title, {
         x: -100,
-        opacity: 0
+        opacity: 0,
+        ease: "Power2.easeInOut"
       });
       tl.from(
-        splitTextDescription.words,
+        description,
         {
-          stagger: 0.01,
           x: -100,
-          opacity: 0
+          opacity: 0,
+          ease: "Power2.easeInOut"
         },
         "<"
       );

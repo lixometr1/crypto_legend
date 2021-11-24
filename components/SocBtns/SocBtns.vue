@@ -10,7 +10,10 @@
       <svgTelegram />
     </SocBtn>
     <SocBtn href="#">
-      <svgInstagram />
+      <svgDiscord />
+    </SocBtn>
+    <SocBtn href="#">
+      <svgReddit />
     </SocBtn>
   </div>
 </template>
@@ -18,10 +21,11 @@
 <script>
 import svgTwitter from "@/assets/icons/twitter.svg?inline";
 import svgFacebook from "@/assets/icons/facebook.svg?inline";
-import svgInstagram from "@/assets/icons/instagram.svg?inline";
+import svgDiscord from "@/assets/icons/discord.svg?inline";
 import svgTelegram from "@/assets/icons/telegram.svg?inline";
+import svgReddit from "@/assets/icons/reddit.svg?inline";
 export default {
-  components: { svgTwitter, svgFacebook, svgInstagram, svgTelegram }
+  components: { svgTwitter, svgFacebook, svgDiscord,svgReddit, svgTelegram }
 };
 </script>
 
