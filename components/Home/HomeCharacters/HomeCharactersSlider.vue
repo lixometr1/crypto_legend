@@ -40,6 +40,7 @@ export default {
         slideToClickedSlide: true,
         spaceBetween: 20,
         threshold: 5,
+        direction: 'vertical',
         on: {
           slideChange() {
             vm.$emit("input", this.realIndex);
@@ -62,7 +63,7 @@ export default {
   }
   &__item {
     @apply bg-opacity-20 bg-white backdrop-filter backdrop-blur-[20px] opacity-20 w-[5.5rem] h-[5.5rem] 
-    transition-all relative cursor-pointer md:border md:border-primary md:opacity-100 !important;
+    transition-all relative cursor-pointer md:border md:border-orange md:opacity-100 !important;
     img {
       @apply object-contain absolute inset-0 w-full h-full;
     }

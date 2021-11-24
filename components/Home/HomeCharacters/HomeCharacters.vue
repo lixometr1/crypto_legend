@@ -3,12 +3,12 @@
     <div class="container h-full">
       <ThreeSlider :items="bgSlider" />
       <transition @enter="onEnter" @leave="onLeave" mode="out-in">
-        <div class="home-characters__row" :key="activeFraction">
+        <div class="home-characters__row">
           <div class="home-characters__left">
-            <HomeCharactersFractions v-model="activeFraction" />
+            <HomeCharactersFractions :value="activeSlide.fraction" />
             <HomeCharactersInfo
               v-bind="activeSlide"
-              :animationKey="activeSlideIdx + activeFraction"
+              :animationKey="activeSlideIdx"
             />
           </div>
           <div class="home-characters__right">
@@ -26,12 +26,9 @@
               />
             </transition>
 
-            <HomeCharactersSlider
-              :items="activeCharacters"
-              v-model="activeSlideIdx"
-            />
+            <HomeCharactersSlider :items="items" v-model="activeSlideIdx" />
           </div>
-          <ScrollDown text="ecosystem" />
+          <ScrollDown text="ecosystem" @click="scrollNext" />
         </div>
       </transition>
     </div>
@@ -50,21 +47,23 @@ export default {
       bgSlider: [require("@/assets/img/characters_bg.png")],
       activeFraction: "water",
       activeSlideIdx: 0,
-      items: charactersData
+      items: charactersData.items
     };
   },
   computed: {
     activeSlide() {
-      return this.activeFractionData?.items?.[this.activeSlideIdx];
-    },
-    activeFractionData() {
-      return this.items[this.activeFraction];
-    },
-    activeCharacters() {
-      return this.activeFractionData.items;
+      return this.items[this.activeSlideIdx];
     }
+
+    // activeCharacters() {
+    //   return this.activeFractionData.items;
+    // }
   },
   mounted() {
+    this.items.map(item => {
+      const img = new Image();
+      img.src = item.image;
+    });
     const tl = gsap.timeline();
     const title = this.$refs.container.querySelector(".text-block__title");
     const description = this.$refs.container.querySelector(
@@ -126,18 +125,36 @@ export default {
     });
   },
   methods: {
+    beforeEnter() {
+      this.setSlideColor();
+      return true;
+    },
+    scrollNext() {
+      this.$nuxt.$emit("scrollNextSection");
+    },
     onImageEnter(el, done) {
       const tl = gsap.timeline({ onComplete: done });
-      console.log(el);
-      tl.from(el, {
-        scale: 0
-      });
+      tl.from(
+        ".home-characters__image",
+        {
+          yPercent: 100,
+          opacity: 0,
+          ease: "Power2.easeInOut"
+        },
+        "<"
+      );
     },
     onImageLeave(el, done) {
       const tl = gsap.timeline({ onComplete: done });
-      tl.to(el, {
-        scale: 0
-      });
+      tl.to(
+        ".home-characters__image",
+        {
+          x: 200,
+          opacity: 0,
+          ease: "Power2.easeInOut"
+        },
+        "<"
+      );
     },
     beforeEnter() {
       this.$store.dispatch("changePrimaryColor", "#236FE1");
@@ -177,17 +194,16 @@ export default {
         },
         "<"
       );
+    },
+    setSlideColor() {
+      if (this.activeSlide?.color) {
+        this.$store.dispatch("changePrimaryColor", this.activeSlide.color);
+      }
     }
   },
   watch: {
-    activeFraction() {
-      this.activeSlideIdx = 0;
-      if (this.activeFractionData?.color) {
-        this.$store.dispatch(
-          "changePrimaryColor",
-          this.activeFractionData.color
-        );
-      }
+    activeSlideIdx() {
+      this.setSlideColor();
     }
   }
 };

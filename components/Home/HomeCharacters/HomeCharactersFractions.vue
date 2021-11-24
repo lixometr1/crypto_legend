@@ -59,9 +59,11 @@ export default {
 .home-characters-fractions {
   @apply flex-y-center space-x-4.5 mb-16 xl:mb-4.5;
   &__item {
-    @apply w-10 h-10 block bg-white bg-opacity-20 backdrop-filter backdrop-blur-[20px] rounded-full hover:bg-opacity-100 hover:bg-[#6E6E6E] transition-all;
+    @apply w-10 h-10 block bg-white bg-opacity-20 backdrop-filter backdrop-blur-[20px] rounded-full cursor-default transition-all;
+    /* hover:bg-opacity-100 hover:bg-[#6E6E6E] transition-all */
     &.active {
-      @apply bg-[#6E6E6E] bg-opacity-100;
+      @apply bg-primary bg-opacity-100;
+      box-shadow: 0px 0px 20px var(--color-primary);
     }
   }
 }

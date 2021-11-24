@@ -5,7 +5,7 @@
         <TextBlock :title="activeItemData.title" ref="textBlock">
           <template #description>
             <div>
-              <div class="home-roadmap__content-subtitle">Game mechanics:</div>
+              <div class="home-roadmap__content-subtitle" v-if="activeItemData.showGameMechanic">Game mechanics:</div>
               <ul class="home-roadmap__list home-roadmap__list-pros">
                 <li
                   class="home-roadmap__list-item"
