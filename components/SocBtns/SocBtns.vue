@@ -28,7 +28,7 @@ import { SocLinks } from "@/helpers/constants";
 export default {
   components: { svgTwitter, svgFacebook, svgDiscord, svgReddit, svgTelegram },
   data: () => ({
-    SocLink
+    SocLinks
   })
 };
 </script>
