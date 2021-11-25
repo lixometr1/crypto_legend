@@ -41,7 +41,7 @@ export default {
         link: "#partners"
       },
       {
-        name: "CONTACT US",
+        name: "Join airdrop",
         link: "#contact-us"
       }
     ]
