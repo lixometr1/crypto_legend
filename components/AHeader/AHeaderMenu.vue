@@ -37,8 +37,8 @@ export default {
         link: "#nft"
       },
       {
-        name: "partners",
-        link: "#partners"
+        name: "ecosystem",
+        link: "#ecosystem"
       },
       {
         name: "Join airdrop",

@@ -1,11 +1,12 @@
 <template>
   <div class="page-home">
-    <HomeScreenFirst class="home-screen-full" ref="section1" />
+    <!-- <HomeScreenFirst class="home-screen-full" ref="section1" />
     <HomeAbout class="home-screen-full" ref="section2" />
     <HomeRoadmap class="home-screen-full" ref="section3" />
     <HomeCharacters class="home-screen-full" ref="section4" />
-    <HomeNft class="home-screen-full" ref="section5" />
-    <HomePartners class="" />
+    <HomeNft class="home-screen-full" ref="section5" /> -->
+    <HomeEcosystem />
+    <!-- <HomePartners class="" /> -->
     <HomeContact class="" />
   </div>
 </template>
