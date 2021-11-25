@@ -1,5 +1,5 @@
 <template>
-  <a v-bind="$attrs" v-on="$listeners" class="soc-btn">
+  <a v-bind="$attrs" target="_blank" v-on="$listeners" class="soc-btn">
     <slot />
   </a>
 </template>

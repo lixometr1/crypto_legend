@@ -32,12 +32,14 @@ export default {
     this.$locoScroll.scrollTo(0);
     this.startSectionScroll();
     this.$nuxt.$on("scrollNextSection", this.scrollNextSection);
+    this.$nuxt.$on("scrollToSection", this.scrollToSectionById);
   },
   beforeDestroy() {
     this.stopFreeScroll();
     this.stopSectionScroll();
     this.$locoScroll.start();
     this.$nuxt.$off("scrollNextSection", this.scrollNextSection);
+    this.$nuxt.$off("scrollToSection", this.scrollToSectionById);
   },
   computed: {
     activeSectionComp() {
@@ -45,6 +47,41 @@ export default {
     }
   },
   methods: {
+    scrollToSectionById(id) {
+      if (this.isScrolling) return;
+      const section = document.querySelector(id);
+      const fullScreenSections = new Array(5)
+        .fill(0)
+        .map((_, index) => this.$refs[`section${index + 1}`]);
+      const sectionFullIdx = fullScreenSections.findIndex(
+        sec => sec.$el === section
+      );
+      if (sectionFullIdx > -1) {
+        if (this.scrollType !== "section") {
+          this.stopFreeScroll();
+          this.startSectionScroll();
+        }
+        this.activeScreen = sectionFullIdx;
+        this.$store.dispatch("resetPrimaryColor");
+        this.activeSectionComp.beforeEnter();
+        this.scrollToActiveSection();
+      } else {
+        this.activeScreen = 4;
+        this.$store.dispatch("resetPrimaryColor");
+        // this.activeSectionComp.beforeEnter();
+        this.$locoScroll.scrollTo(id, {
+          duration: 800,
+          disableLerp: true,
+          easing: [0.6, 0.02, 0.35, 0.97],
+          callback: () => {
+            if (this.scrollType !== "free") {
+              this.stopSectionScroll();
+              this.startFreeScroll();
+            }
+          }
+        });
+      }
+    },
     startSectionScroll() {
       this.$nuxt.$emit("nav:transition", true);
 
@@ -147,7 +184,7 @@ export default {
         "nav:progress",
         (currentScrollSpace / scrollSpace) * 100
       );
-      if (currentScroll < lastSectionOffset) {
+      if (currentScroll < lastSectionOffset && this.scrollType !== "section") {
         this.startSectionScroll();
         this.stopFreeScroll();
         this.activeScreen--;

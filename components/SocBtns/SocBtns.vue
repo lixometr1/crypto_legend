@@ -1,18 +1,18 @@
 <template>
   <div class="soc-btns">
-    <SocBtn href="#">
+    <SocBtn :href="SocLinks.twitter">
       <svgTwitter />
     </SocBtn>
-    <SocBtn href="#">
+    <SocBtn :href="SocLinks.facebook">
       <svgFacebook />
     </SocBtn>
-    <SocBtn href="#">
+    <SocBtn :href="SocLinks.telegram">
       <svgTelegram />
     </SocBtn>
-    <SocBtn href="#">
+    <SocBtn :href="SocLinks.discord">
       <svgDiscord />
     </SocBtn>
-    <SocBtn href="#">
+    <SocBtn :href="SocLinks.reddit">
       <svgReddit />
     </SocBtn>
   </div>
@@ -24,13 +24,17 @@ import svgFacebook from "@/assets/icons/facebook.svg?inline";
 import svgDiscord from "@/assets/icons/discord.svg?inline";
 import svgTelegram from "@/assets/icons/telegram.svg?inline";
 import svgReddit from "@/assets/icons/reddit.svg?inline";
+import { SocLinks } from "@/helpers/constants";
 export default {
-  components: { svgTwitter, svgFacebook, svgDiscord,svgReddit, svgTelegram }
+  components: { svgTwitter, svgFacebook, svgDiscord, svgReddit, svgTelegram },
+  data: () => ({
+    SocLink
+  })
 };
 </script>
 
 <style lang="postcss">
 .soc-btns {
-    @apply flex-y-center space-x-5;
+  @apply flex-y-center space-x-5;
 }
 </style>
