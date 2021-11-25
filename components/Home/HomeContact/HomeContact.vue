@@ -50,9 +50,12 @@ export default {
         md:w-full md:transform-none md:mt-2;
   }
   &__btn {
-    @apply font-bold text-2xl text-white px-5 py-3 mt-3 inline-block md:text-lg md:py-2 sm:text-base sm:px-4;
+    @apply font-bold text-2xl text-white px-5 py-3 mt-3 inline-block md:text-lg md:py-2 sm:text-base sm:px-4 transition-all;
     letter-spacing: 3px;
-    background: linear-gradient(90deg, #DC2D2D 0%, #AF0F0F 100%);
+    background: linear-gradient(90deg, #dc2d2d 0%, #af0f0f 100%);
+    &:hover {
+      background: linear-gradient(90deg, #b92525 0%, #8b0b0b 100%);
+    }
   }
 }
 </style>

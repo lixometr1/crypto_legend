@@ -55,11 +55,12 @@ export default {
   },
   methods: {
     goToSection(sectionId) {
-      this.$locoScroll.scrollTo(sectionId, {
-        duration: 800,
-        disableLerp: true,
-        easing: [0.6, 0.02, 0.35, 0.97]
-      });
+      this.$nuxt.$emit('scrollToSection', sectionId)
+      // this.$locoScroll.scrollTo(sectionId, {
+      //   duration: 800,
+      //   disableLerp: true,
+      //   easing: [0.6, 0.02, 0.35, 0.97]
+      // });
     },
   
   },

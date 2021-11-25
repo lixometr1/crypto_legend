@@ -19,40 +19,41 @@ import svgTelegram from "@/assets/icons/telegram.svg?inline";
 // import svgInstagram from "@/assets/icons/instagram.svg?inline";
 import svgDiscord from "@/assets/icons/discord.svg?inline";
 import svgReddit from "@/assets/icons/reddit.svg?inline";
+import { SocLinks } from "~/helpers/constants";
 export default {
   components: { svgTwitter },
   data: () => ({
     items: [
       {
         icon: svgTwitter,
-        link: "#",
+        link: SocLinks.twitter
       },
       {
         icon: svgFaceook,
-        link: "#",
+        link: SocLinks.facebook
       },
       {
         icon: svgTelegram,
-        link: "#",
+        link: SocLinks.telegram
       },
       {
         icon: svgDiscord,
-        link: "#",
+        link: SocLinks.discord
       },
       {
         icon: svgReddit,
-        link: "#",
-      },
-    ],
-  }),
+        link: SocLinks.reddit
+      }
+    ]
+  })
 };
 </script>
 
 <style lang="postcss">
 .nav-bar-soc {
-    @apply flex-y-center flex-col space-y-6 pb-16;
-    &__item {
-        @apply block w-4.5 text-white;
-    }
+  @apply flex-y-center flex-col space-y-6 pb-16;
+  &__item {
+    @apply block w-4.5 text-white;
+  }
 }
 </style>
