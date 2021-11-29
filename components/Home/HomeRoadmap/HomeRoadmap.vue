@@ -1,11 +1,20 @@
 <template>
-  <div class="home-roadmap home-screen" id="roadmap">
+  <div
+    class="home-roadmap home-screen"
+    id="roadmap"
+    :style="{ '--window-height': wHeight + 'px' }"
+  >
     <transition @enter="onSlideEnter" @leave="onSlideLeave" mode="out-in">
       <div class="container home-roadmap__content" :key="activeItem">
         <TextBlock :title="activeItemData.title" ref="textBlock">
           <template #description>
             <div>
-              <div class="home-roadmap__content-subtitle" v-if="activeItemData.showGameMechanic">Game mechanics:</div>
+              <div
+                class="home-roadmap__content-subtitle"
+                v-if="activeItemData.showGameMechanic"
+              >
+                Game mechanics:
+              </div>
               <ul class="home-roadmap__list home-roadmap__list-pros">
                 <li
                   class="home-roadmap__list-item"
@@ -27,15 +36,15 @@
             </div>
           </template>
         </TextBlock>
-        <ScrollDown
-          text="HEROES"
-          class="home-roadmap__scroll-down"
-          @click.prevent="scrollNext"
-        />
+        
       </div>
     </transition>
 
-    <HomeRoadmapBar :progress="1.5" v-model="activeItem" :items="headings" />
+    <HomeRoadmapBar
+      :progress="1.5"
+      v-model="activeItem"
+      :items="headings"
+    />
   </div>
 </template>
 
@@ -50,9 +59,14 @@ import svgMinus from "@/assets/icons/list_minus.svg?inline";
 export default {
   components: { svgScrollDown, svgPlus, svgMinus },
   mixins: [HomeSectionMixin],
-  data: () => ({ activeItem: 0, items: homeRoadmapData }),
+  data: () => ({ activeItem: 0, items: homeRoadmapData, wHeight: 0 }),
   mounted() {
     this.onViewEnter();
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.onResize);
   },
   computed: {
     activeItemData() {
@@ -63,12 +77,11 @@ export default {
     }
   },
   methods: {
-    scrollNext() {
-      this.$nuxt.$emit("scrollNextSection");
+    onResize() {
+      this.wHeight = window.innerHeight;
     },
-    scrollNext() {
-      this.$nuxt.$emit("scrollNextSection");
-    },
+    
+
     beforeEnter() {
       this.$store.dispatch("changePrimaryColor", "#EBD666");
     },
@@ -167,8 +180,6 @@ export default {
       }
     }
   }
-  .scroll-down {
-    @apply bottom-[140px] lg:bottom-[100px] md:bottom-[80px];
-  }
+ 
 }
 </style>

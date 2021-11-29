@@ -98,10 +98,10 @@ export default {
     @apply transform translate-x-[33px] md:transform-none;
   }
   &__title {
-    @apply max-w-[750px] mt-[110px] mx-auto lg:w-[650px] xl:mt-[70px] md:w-[660px] md:mt-[80px] sm:w-full;
+    @apply max-w-[750px] mt-[110px] mx-auto lg:w-[650px] xl:mt-[70px] md:w-[660px] md:mt-[70px] sm:mt-[20px] sm:w-full;
   }
   &__buttons {
-    @apply flex-center mt-8 w-full space-x-12  xs:space-x-2;
+    @apply flex-center mt-8 w-full space-x-12  xs:space-x-2 md:transform md:translate-x-[5px];
   }
   &__bg {
     @apply absolute inset-0 z-0;
@@ -128,9 +128,8 @@ export default {
       box-shadow: 3px 6px 15px -2px rgba(0, 0, 0, 0.25), -2px -4px 10px rgba(255, 255, 255, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.35) !important;
       border-radius: 3px !important;
       &:hover {
-        @apply text-primary !important;
-        box-shadow: 3px 6px 15px -2px rgba(0, 0, 0, 0.25), -2px -4px 10px rgba(255, 255, 255, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.35) !important;
-        background: #fff !important;
+        @apply opacity-70;
+        /* box-shadow: 3px 6px 15px -2px rgba(0, 0, 0, 0.25), -2px -4px 10px rgba(255, 255, 255, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.35) !important; */
       }
     }
     &-second {
@@ -139,7 +138,7 @@ export default {
       box-shadow: 0px 20px 15px -15px rgba(0, 0, 0, 0.2), -1.5px -1.5px 3px rgba(255, 255, 255, 0.35) !important;
       border-radius: 3px !important;
       &:hover {
-        @apply bg-white text-primary !important;
+        @apply opacity-70;
       }
     }
   }
