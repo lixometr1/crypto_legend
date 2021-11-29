@@ -29,10 +29,6 @@ export default {
         link: SocLinks.twitter
       },
       {
-        icon: svgFaceook,
-        link: SocLinks.facebook
-      },
-      {
         icon: svgTelegram,
         link: SocLinks.telegram
       },

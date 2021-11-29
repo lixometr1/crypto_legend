@@ -45,6 +45,19 @@ export default {
         on: {
           slideChange() {
             vm.$emit("input", this.realIndex);
+          },
+          touchMove(e) {
+            // console.log('top', e)
+            e.stopPropagation();
+          },
+          touchEnd(e) {
+            e.stopPropagation();
+          },
+          touchStart(e) {
+            e.stopPropagation();
+          },
+          sliderMove(e) {
+            e.stopPropagation();
           }
         }
       }
@@ -56,6 +69,9 @@ export default {
 <style lang="postcss">
 .home-characters-slider {
   @apply h-[580px] w-[8rem];
+  @media screen and (min-width: theme("screens.xl.max")) {
+    @apply absolute right-24 top-1/2 transform -translate-y-1/2;
+  }
   .swiper-container {
     @apply max-h-full;
   }
@@ -64,7 +80,7 @@ export default {
   }
   &__item {
     @apply bg-opacity-20 bg-white backdrop-filter backdrop-blur-[20px] opacity-20 w-[5.5rem] h-[5.5rem] 
-    transition-all relative cursor-pointer rounded-md md:border md:border-orange md:opacity-100 overflow-hidden !important;
+    transition-all relative cursor-pointer rounded-md overflow-hidden md:w-[5rem] md:h-[5rem] !important;
     img {
       @apply object-contain absolute inset-0 w-full h-full z-30;
     }
@@ -72,7 +88,7 @@ export default {
       @apply opacity-0 absolute z-10 bottom-0 left-1/2 transform -translate-x-1/2 w-[70px] h-[70px] filter blur-[50px] bg-primary;
     }
     &.swiper-slide-active {
-      @apply opacity-100 w-[8rem] h-[8rem] md:w-[5.5rem]  md:h-[5.5rem] !important;
+      @apply opacity-100 w-[8rem] h-[8rem] md:w-[6.5rem] md:h-[6.5rem] !important;
     }
     &.swiper-slide-active & {
       &-bg {

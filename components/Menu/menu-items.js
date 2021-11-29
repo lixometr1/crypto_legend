@@ -8,6 +8,10 @@ export default [
   //   link: "/blog/post"
   // },
   {
+    name: "Home",
+    link: '/'
+  },
+  {
     name: "NFT Marketplace",
     children: [
       {

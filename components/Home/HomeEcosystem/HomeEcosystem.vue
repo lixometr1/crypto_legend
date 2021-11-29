@@ -13,7 +13,7 @@
           <div class="home-ecosystem__image-mob">
             <img
               width="550"
-              src="@/assets/img/ecosystem_stat.svg"
+              src="@/assets/img/ecosystem_stat.png"
               alt="statistics"
             />
           </div>
