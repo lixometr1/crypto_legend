@@ -43,7 +43,6 @@ export default {
       if (!els) return 0;
       const activeEl = els[this.value];
       const width = activeEl.offsetLeft;
-      console.log(width);
       this.progressWidth = width + "px";
     },
     selectItem(idx) {

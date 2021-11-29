@@ -44,8 +44,9 @@ export class DisplacementSlider {
     this.renderW = this.renderH * imageRatio;
     const whiteSpaceX = this.canvasWidth - this.renderW;
     if (whiteSpaceX < 0) {
-      this.camera.position.x = -whiteSpaceX / 2;
+      // this.camera.position.x = -whiteSpaceX / 2;
     } else {
+      console.log(2);
       this.renderW = this.canvasWidth;
       this.renderH = this.renderW / imageRatio;
       const whiteSpaceY = this.canvasHeight - this.renderH;
@@ -82,7 +83,6 @@ export class DisplacementSlider {
     );
 
     this.camera.position.z = 1;
-
     this.material = new THREE.ShaderMaterial({
       uniforms: {
         dispFactor: { type: "f", value: 0.0 },
@@ -100,8 +100,11 @@ export class DisplacementSlider {
       this.parent.offsetHeight,
       1
     );
+
+    console.log(this.parent.offsetWidth, this.parent.offsetHeight);
     this.object = new THREE.Mesh(this.geometry, this.material);
     this.object.position.set(0, 0, 0);
+    // console.log(this.object);
     this.scene.add(this.object);
     this.updateRatio();
 
