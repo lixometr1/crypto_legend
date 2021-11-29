@@ -34,7 +34,7 @@
         <div class="home-ecosystem__image">
           <img
             width="780"
-            src="@/assets/img/ecosystem_stat.svg"
+            src="@/assets/img/ecosystem_stat.png"
             alt="statistics"
           />
         </div>
@@ -54,6 +54,7 @@ export default {
 
 <style lang="postcss">
 .home-ecosystem {
+  @apply my-8;
   .container {
     @apply flex-y-center;
   }
