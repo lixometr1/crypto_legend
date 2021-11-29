@@ -221,6 +221,7 @@ export default {
   .home-screen {
     @apply h-screen relative;
 
+
     /* scroll-snap-type: y mandatory; */
   }
 }

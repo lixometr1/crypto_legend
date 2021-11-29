@@ -1,25 +1,32 @@
 <template>
-  <div class="home-roadmap-bar">
-    <div class="container ">
-      <div class="relative h-full">
-        <div class="home-roadmap-bar__items">
-          <a
-            href="javascript:void(0)"
-            class="home-roadmap-bar__item"
-            v-for="(item, idx) in items"
-            :class="{ active: idx <= value }"
-            :key="idx"
-            @click.prevent="selectItem(idx)"
-            ref="barItems"
-          >
-            <span> {{ item }}</span>
-          </a>
-        </div>
-        <div class="home-roadmap-bar__progress">
-          <div
-            class="home-roadmap-bar__progress-active"
-            :style="{ width: progressWidth }"
-          ></div>
+  <div class="home-roadmap-bar-wrapper">
+    <ScrollDown
+      text="HEROES"
+      class="home-roadmap__scroll-down"
+      @click.prevent="scrollNext"
+    />
+    <div class="home-roadmap-bar">
+      <div class="container ">
+        <div class="relative h-full">
+          <div class="home-roadmap-bar__items">
+            <a
+              href="javascript:void(0)"
+              class="home-roadmap-bar__item"
+              v-for="(item, idx) in items"
+              :class="{ active: idx <= value }"
+              :key="idx"
+              @click.prevent="selectItem(idx)"
+              ref="barItems"
+            >
+              <span> {{ item }}</span>
+            </a>
+          </div>
+          <div class="home-roadmap-bar__progress">
+            <div
+              class="home-roadmap-bar__progress-active"
+              :style="{ width: progressWidth }"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,6 +57,9 @@ export default {
     },
     onResize() {
       this.calculateProgressbarWidth();
+    },
+    scrollNext() {
+      this.$nuxt.$emit("scrollNextSection");
     }
   },
   mounted() {
@@ -70,8 +80,16 @@ export default {
 
 <style lang="postcss">
 .home-roadmap-bar {
-  @apply mt-auto bottom-0 left-0 right-0 h-[156px] flex-y-center backdrop-filter backdrop-blur-[15px]
-    xl:h-[104px] lg:h-[80px] md:h-[62px] relative border-t border-white border-opacity-50;
+  @apply h-[156px] flex-y-center backdrop-filter backdrop-blur-[15px]
+    xl:h-[104px] lg:h-[80px] md:h-[62px] border-t border-white border-opacity-50;
+  &-wrapper {
+    @apply mt-auto transform -translate-y-full absolute left-0 right-0;
+    top: var(--window-height);
+    .scroll-down {
+      @apply relative bottom-0 mb-6;
+    }
+  }
+
   &__items {
     @apply flex-y-center justify-around;
   }
