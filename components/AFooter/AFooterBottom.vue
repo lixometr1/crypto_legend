@@ -1,6 +1,6 @@
 <template>
   <div class="footer-bottom">
-    <div>Crypto Legend- the game with which you can earn!</div>
+    <div>Impulse - the game with which you can earn!</div>
   </div>
 </template>
 

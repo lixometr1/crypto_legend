@@ -1,7 +1,7 @@
 export default [
   {
     label: "Team:",
-    value: "21.00%"
+    value: "18.00%"
   },
   {
     label: "Airdrop:",
@@ -9,15 +9,15 @@ export default [
   },
   {
     label: "Stacking:",
-    value: "29.00%"
+    value: "27.00%"
   },
   {
     label: "Seed:",
-    value: "2.00%"
+    value: "1.50%"
   },
   {
     label: "Play to Earn:",
-    value: "20.00%"
+    value: "22.00%"
   },
   {
     label: "Private Sales:",
@@ -29,7 +29,7 @@ export default [
   },
   {
     label: "IDO:",
-    value: "1.00%"
+    value: "1.50%"
   },
   {
     label: "Advisors:",
@@ -37,6 +37,6 @@ export default [
   },
   {
     label: "Develop.",
-    value: "4.50%"
+    value: "6.00%"
   }
 ];

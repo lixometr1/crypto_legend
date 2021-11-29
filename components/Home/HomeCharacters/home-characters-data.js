@@ -35,6 +35,24 @@ export const charactersData = {
         "Traditionally, it is difficult for a girl to survive in the male world of thieves and murderers, but she wants to live and even live well!  This is partly why Renfrey had to become the best in her craft, although she hid this fact from everyone. You’ll ask: “Why such a choice?” Does a person have an option in situation: to starve or learn to steal and kill?  So Renfrey decided to fight for a place under this deadly sun.",
       color: "#28CDD8",
       fraction: "air"
+    },
+    {
+      preview: require("@/assets/img/characters_preview/water_2.png"),
+      image: require("@/assets/img/characters/water_2.png"),
+      name: "Captain Ruskin",
+      description:
+        " Fearless Captain Ruskin is a brave warrior and a desperate sea wolf. The famous battleship captain, he conquered not only all the seas of his world, but also the hearts of beautiful ladies were his. A large man, he did not exchange for sabers and pistols, his choice was a hand grape-shooter, with which he could wack an enemy who had broken through the head.",
+      color: "#236FE1",
+      fraction: "water"
+    },
+    {
+      preview: require("@/assets/img/characters_preview/fire_2.png"),
+      image: require("@/assets/img/characters/fire_2.png"),
+      name: "Shantis",
+      description:
+        " Unbridled anger accompanied Shantis throughout his life.  Due to the harsh trials of life, he had to curb the element of fire, his temper became his assistant and companion.  Now, anyone who crosses his path will suffer from the wild attack of the furious wall of fire that Shantis emits.",
+      color: "#E12424",
+      fraction: "fire"
     }
   ]
 };

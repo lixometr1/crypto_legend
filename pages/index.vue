@@ -97,12 +97,18 @@ export default {
       });
       this.touchController.add(Swipe);
       this.touchController.on("swipedown", e => {
+        if (e.target.closest(".home-characters-slider")) {
+          return;
+        }
         if (e.deltaY > 30) {
           if (this.activeScreen < 1) return;
           this.scrollPrevSection();
         }
       });
       this.touchController.on("swipeup", e => {
+        if (e.target.closest(".home-characters-slider")) {
+          return;
+        }
         if (e.deltaY < -30) {
           if (this.activeScreen >= this.sections.length - 1) return;
           this.scrollNextSection();

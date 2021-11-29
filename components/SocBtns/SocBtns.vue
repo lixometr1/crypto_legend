@@ -3,9 +3,6 @@
     <SocBtn :href="SocLinks.twitter">
       <svgTwitter />
     </SocBtn>
-    <SocBtn :href="SocLinks.facebook">
-      <svgFacebook />
-    </SocBtn>
     <SocBtn :href="SocLinks.telegram">
       <svgTelegram />
     </SocBtn>
