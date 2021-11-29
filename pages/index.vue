@@ -195,6 +195,8 @@ export default {
         this.startSectionScroll();
         this.stopFreeScroll();
         this.activeScreen--;
+        this.$store.dispatch("resetPrimaryColor");
+        this.activeSectionComp.beforeEnter();
         this.scrollToActiveSection();
       }
     },
