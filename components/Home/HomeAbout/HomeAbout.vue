@@ -195,7 +195,7 @@ export default {
       @apply bg-white bg-opacity-50 flex-1 h-[3px] mx-2.5;
     }
     &-active {
-      @apply bg-primary h-full bg-opacity-100 transition-all duration-500;
+      @apply bg-primary h-full bg-opacity-100 transition-all duration-500 shadow-primary  ;
     }
   }
   &__list {

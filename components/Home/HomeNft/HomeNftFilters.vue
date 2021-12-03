@@ -20,18 +20,18 @@ export default {
   },
   data: () => ({
     items: [
-      {
-        value: 1,
-        icon: require("@/assets/icons/nft/1.svg?inline")
-      },
+      // {
+      //   value: 1,
+      //   icon: require("@/assets/icons/nft/1.svg?inline")
+      // },
       {
         value: 2,
         icon: require("@/assets/icons/nft/2.svg?inline")
       },
-      {
-        value: 3,
-        icon: require("@/assets/icons/nft/3.svg?inline")
-      }
+      // {
+      //   value: 3,
+      //   icon: require("@/assets/icons/nft/3.svg?inline")
+      // }
     ]
   }),
   methods: {
@@ -45,5 +45,14 @@ export default {
 <style lang="postcss">
 .home-nft-filters {
   @apply flex-y-center space-x-5 mb-8;
+  a{
+    &.active{
+      background-color: #40B6BA;
+      box-shadow:0 0 20px #40B6BA77;
+    }
+    svg{
+
+    }
+  }
 }
 </style>

@@ -8,7 +8,7 @@ export default [
     value: "0.50%"
   },
   {
-    label: "Stacking:",
+    label: "Staking:",
     value: "27.00%"
   },
   {

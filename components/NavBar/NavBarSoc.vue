@@ -51,5 +51,7 @@ export default {
   &__item {
     @apply block w-4.5 text-white;
   }
+  
+
 }
 </style>

@@ -36,7 +36,7 @@ export default {
       gsap.from(el, {
         scale: 0,
         duration: 0.4,
-        ease: "Bounce.easeOut",
+        ease: "Expo.easeOut",
         onComplete: () => done()
       });
     },
@@ -92,6 +92,7 @@ export default {
   }
 
   &__image {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(86, 227, 232, 0.14) 0%, rgba(86, 227, 232, 0.05) 35.42%, rgba(29, 29, 29, 0) 90%);
     @apply h-full w-[485px] xl:w-[400px] flex-center bg-white bg-opacity-5 backdrop-filter backdrop-blur-[20px]
         rounded-md border border-white border-opacity-40 p-9 md:w-full md:p-16 sm:p-10;
     img {

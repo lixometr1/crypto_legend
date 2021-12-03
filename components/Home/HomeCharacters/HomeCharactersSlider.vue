@@ -76,11 +76,11 @@ export default {
     @apply max-h-full;
   }
   .swiper-wrapper {
-    @apply items-center;
+    @apply items-center md:items-end;
   }
   &__item {
     @apply bg-opacity-20 bg-white backdrop-filter backdrop-blur-[20px] opacity-20 w-[5.5rem] h-[5.5rem] 
-    transition-all relative cursor-pointer rounded-md overflow-hidden md:w-[5rem] md:h-[5rem] !important;
+    transition-all relative cursor-pointer rounded-md overflow-hidden md:w-[4rem] md:h-[4rem] !important;
     img {
       @apply object-contain absolute inset-0 w-full h-full z-30;
     }
@@ -88,7 +88,7 @@ export default {
       @apply opacity-0 absolute z-10 bottom-0 left-1/2 transform -translate-x-1/2 w-[70px] h-[70px] filter blur-[50px] bg-primary;
     }
     &.swiper-slide-active {
-      @apply opacity-100 w-[8rem] h-[8rem] md:w-[6.5rem] md:h-[6.5rem] !important;
+      @apply opacity-100 w-[8rem] h-[8rem] md:w-[5rem] md:h-[5rem] !important;
     }
     &.swiper-slide-active & {
       &-bg {

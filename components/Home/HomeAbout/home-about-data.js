@@ -1,7 +1,7 @@
 export default [
   {
     image: require("@/assets/img/about_slider/1.png"),
-    title: "Play to earn",
+    title: "P2E Metaverse",
     description: [
       "A new class of games that are not only entertainment, but an investment",
       "Mine and sell resources, improve your character, develop strategies and get more rewards",

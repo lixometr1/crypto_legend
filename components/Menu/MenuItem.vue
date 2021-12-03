@@ -35,9 +35,10 @@ export default {
   svg {
     @apply ml-auto;
   }
+
   &.active {
     svg {
-      @apply text-primary;
+      @apply text-primary ;
     }
   }
   &:first-child {

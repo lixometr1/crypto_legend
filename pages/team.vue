@@ -7,7 +7,7 @@
         game play, participate in ownership & earn real money
       </div>
       <TeamItems :items="teamItems" />
-      <TeamPartners class="page-team__partners"/>
+      <!-- <TeamPartners class="page-team__partners"/> -->
     </div>
   </div>
 </template>

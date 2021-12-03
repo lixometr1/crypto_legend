@@ -9,7 +9,7 @@ export default {};
 <style lang="postcss">
 .menu-soc-btns {
   .soc-btn {
-    @apply bg-transparent border border-white border-opacity-20 p-3 mt-5;
+    @apply bg-transparent border border-white border-opacity-40 p-3 mt-5 hover:text-primary hover:border-primary hover:shadow-main;
   }
 }
 </style>
