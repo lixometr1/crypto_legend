@@ -45,7 +45,8 @@ export default {
       this.isOpen = !this.isOpen;
     },
     onItemSelect(item) {
-      this.$emit("select", item);
+      console.log('emiting')
+      this.$nuxt.$emit("whitepaper:select", item.id);
     },
     clickItem() {
       if (this.isChild) {

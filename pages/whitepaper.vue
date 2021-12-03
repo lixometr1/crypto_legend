@@ -5,7 +5,7 @@
         <WhitepaperSidebar :items="sidebarItems" />
       </div>
       <div class="whitepaper-col__right container">
-        <WhitepaperContent :content="content" />
+        <nuxt-child />
       </div>
     </div>
     <WhitepaperBg />
@@ -40,6 +40,7 @@ export default {
   }
   &-col {
     &__left {
+      @apply w-[350px] lg:w-[310px];
     }
     &__right {
     }

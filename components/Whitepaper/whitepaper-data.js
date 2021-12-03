@@ -4,10 +4,12 @@ export default [
     slug: "test",
     children: [
       {
-        value: "Vision"
+        value: "Intro",
+        id: 'first'
       },
       {
-        value: "Who are we"
+        value: "What are Illuvials?",
+        id: 'second'
       },
       {
         value: "Why morrallis?"

@@ -27,7 +27,8 @@ export default {
 
 <style lang="postcss">
 .whitepaper-sidebar {
-  @apply h-full pt-10 w-[350px] lg:w-[310px] flex flex-col items-center border-r border-white border-opacity-30;
+  @apply fixed left-0 top-0 bottom-0 overflow-scroll
+     h-full pt-[150px] xl:pt-[120px] w-[350px] lg:w-[310px] flex flex-col items-center border-r border-white border-opacity-30;
   &__title {
     @apply uppercase text-[#676D7D] w-[180px] mb-3;
   }
