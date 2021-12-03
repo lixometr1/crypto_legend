@@ -73,7 +73,7 @@ export default {
       return this.items[this.activeItem];
     },
     headings() {
-      return this.items.map((item, idx) => `Q${idx + 1}`);
+      return this.items.map((item, idx) => `${idx + 1}`);
     }
   },
   methods: {

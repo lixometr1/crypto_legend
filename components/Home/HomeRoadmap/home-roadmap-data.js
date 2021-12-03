@@ -1,6 +1,6 @@
 export default [
   {
-    title: "Q3/2021",
+    title: "Q1-Q3/2021",
     pros: [
       "Analysis of blockchain capabilities",
       "Creating an Idea ",
@@ -21,7 +21,8 @@ export default [
       "NFT Sale",
       "IDO, Listing $IMP on Panckake",
       "IMPULSE alpha vesrion",
-      "Listing on CMS"
+      "Listing on CMS",
+      "Impulse wallet"
     ]
   },
   {

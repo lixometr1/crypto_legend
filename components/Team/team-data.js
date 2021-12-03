@@ -13,5 +13,15 @@ export default [
     title: "Wade Warren 3",
     description: "CEO & Founder",
     image: require("@/assets/img/team-photo.jpg")
+  },
+  {
+    title: "Wade Warren 3",
+    description: "CEO & Founder",
+    image: require("@/assets/img/team-photo.jpg")
+  },
+  {
+    title: "Wade Warren 3",
+    description: "CEO & Founder",
+    image: require("@/assets/img/team-photo.jpg")
   }
 ];

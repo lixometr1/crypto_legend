@@ -15,6 +15,6 @@ export default {
 
 <style lang="postcss">
 .nav-bar-burger {
-  @apply h-[5.5rem] border-b border-white flex-center  relative z-300;
+  @apply h-[5.5rem] border-b border-white border-opacity-40 flex-center  relative z-300;
 }
 </style>

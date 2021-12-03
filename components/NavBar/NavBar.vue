@@ -34,8 +34,8 @@ export default {
 <style lang="postcss">
 .nav-bar {
   @apply fixed top-0 h-screen right-0 w-navbar
-    border-l border-white
-    backdrop-filter backdrop-blur-md bg-black bg-opacity-20
+    border-l border-white border-opacity-40
+    backdrop-filter backdrop-blur-sm bg-black bg-opacity-10
     flex flex-col items-stretch z-300 md:hidden transition-transform duration-300 transform;
   &.is-hidden {
     @apply translate-x-full;

@@ -12,14 +12,23 @@ export default [
     link: '/'
   },
   {
-    name: "NFT Marketplace",
+    name: "Dapp",
     children: [
       {
-        name: "Conect wallet ???"
+        name: "Home"
       },
       {
-        name: "My Profile ???"
-      }
+        name: "Airdrop"
+      },
+      {
+        name: "Leaderboard"
+      },
+      {
+        name: "NFT Marketplace"
+      },
+      {
+        name: "Solana NFT"
+      },
     ]
   },
   // {
@@ -46,16 +55,21 @@ export default [
   //     }
   //   ]
   // },
-  {
-    name: "FAQ",
-    link: "/faq"
-  },
-  {
-    name: "Team",
-    link: "/team"
-  },
+
+  // {
+  //   name: "FAQ",
+  //   link: "/faq"
+  // },
   {
     name: "Blog",
     link: "/blog"
-  }
+  },
+  // {
+  //   name: "Team",
+  //   link: "/team"
+  // },
+  {
+    name: "Whitepapper",
+    link: "/whitepapper"
+  },
 ];

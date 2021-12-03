@@ -20,6 +20,6 @@ export default {
 
 <style lang="postcss">
 .scroll-top {
-  @apply text-primary fixed bottom-4;
+  @apply text-primary fixed bottom-4 shadow-primary;
 }
 </style>
