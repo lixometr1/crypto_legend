@@ -2,7 +2,7 @@
   <div class="footer-menu">
     <div class="footer-menu__col" v-for="(col, idx) in cols" :key="idx">
       <a
-        href="#"
+        :href="item.link"
         @click.prevent
         class="footer-menu-item"
         v-for="(item, index) in col.items"

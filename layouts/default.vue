@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     onEnter(el, done) {
-      console.log('entering', el)
       const tl = gsap.timeline({
         onComplete: done
       });
@@ -39,7 +38,6 @@ export default {
       });
     },
     onLeave(el, done) {
-      console.log('leaving')
       const tl = gsap.timeline({ onComplete: done });
       tl.to(el, {
         opacity: 0
