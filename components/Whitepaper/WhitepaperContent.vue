@@ -7,6 +7,7 @@
 
 <script>
 export default {
+
   props: {
     content: String
   },
@@ -14,6 +15,8 @@ export default {
     this.$nuxt.$off("whitepaper:select", this.scrollToSection);
   },
   mounted() {
+    this.$nuxt.$emit("loco:update");
+
     this.$nuxt.$on("whitepaper:select", this.scrollToSection);
   },
   methods: {
@@ -26,7 +29,7 @@ export default {
 
 <style lang="postcss">
 .whitepaper-content {
-  @apply max-w-[1000px] pl-[180px] xl:pl-[80px];
+  @apply max-w-[1000px] pl-[180px] xl:pl-[80px] md:pl-0;
   h2 {
     @apply mb-6;
   }

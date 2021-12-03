@@ -21,6 +21,7 @@
       </span>
       <svgArrowRight width="5" />
     </a>
+    <WhitepaperBurger />
   </div>
 </template>
 
@@ -45,7 +46,7 @@ export default {
   @apply flex items-center justify-between;
   &__btn {
     @apply flex items-center justify-center px-10 py-0 space-x-4 border border-white rounded-md uppercase
-    font-semibold text-sm;
+    font-semibold text-sm md:h-[37px];
     &-next {
     }
     &-prev {

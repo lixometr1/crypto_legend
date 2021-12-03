@@ -40,7 +40,7 @@ export default {
   }
   &-col {
     &__left {
-      @apply w-[350px] lg:w-[310px];
+      @apply w-[350px] lg:w-[310px] md:w-0;
     }
     &__right {
     }
