@@ -2,7 +2,7 @@
   <div class="footer-menu">
     <div class="footer-menu__col" v-for="(col, idx) in cols" :key="idx">
       <a
-        href="#"
+        :href="item.link"
         @click.prevent
         class="footer-menu-item"
         v-for="(item, index) in col.items"
@@ -21,50 +21,51 @@ export default {
       {
         items: [
           {
-            title: "About game"
+            title: "Home"
           },
+          // {
+          //   title: "Team"
+          // }
+        ]
+      },
+      {
+        items: [
           {
-            title: "Team"
+            title: "DAPP"
+          },
+          // {
+          //   title: "Stacking"
+          // }
+        ]
+      },
+      {
+        items: [
+          // {
+          //   title: "Buy Token"
+          // },
+          {
+            title: "Whitepapper"
           }
         ]
       },
       {
         items: [
           {
-            title: "NFT marketplace"
+            title: "Blog",
+            link: "/blog"
           },
-          {
-            title: "Stacking"
-          }
+          // {
+          //   title: "Privacy Policy"
+          // }
         ]
       },
       {
         items: [
+          // {
+          //   title: "Contact"
+          // },
           {
-            title: "Buy Token"
-          },
-          {
-            title: "FAQ"
-          }
-        ]
-      },
-      {
-        items: [
-          {
-            title: "Blog"
-          },
-          {
-            title: "Privacy Policy"
-          }
-        ]
-      },
-      {
-        items: [
-          {
-            title: "Contact"
-          },
-          {
-            title: "info@rpg.com"
+            title: "About Airdrop"
           }
         ]
       }

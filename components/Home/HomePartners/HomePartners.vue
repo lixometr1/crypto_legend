@@ -1,8 +1,8 @@
 <template>
-  <div class="home-partners home-screen" id="partners">
+  <div class="home-partners home-screen" id="technology">
     <div class="home-partners__title">
       <div class="container">
-        <h2>Partners</h2>
+        <h2>Technology</h2>
       </div>
     </div>
     <div class="container">

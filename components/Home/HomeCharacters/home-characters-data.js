@@ -39,18 +39,18 @@ export const charactersData = {
     {
       preview: require("@/assets/img/characters_preview/water_2.png"),
       image: require("@/assets/img/characters/water_2.png"),
-      name: "Captain Ruskin",
+      name: "Morin",
       description:
-        " Fearless Captain Ruskin is a brave warrior and a desperate sea wolf. The famous battleship captain, he conquered not only all the seas of his world, but also the hearts of beautiful ladies were his. A large man, he did not exchange for sabers and pistols, his choice was a hand grape-shooter, with which he could wack an enemy who had broken through the head.",
+        " Morin is a great example of the fact that everyone can become respectable and one of the best. He didn’t have any outstanding talent and wasn’t mana’s favourite. Nevertheless, you can't argue against the facts, now he is a role model for other and often lead attacks against opponents.",
       color: "#236FE1",
       fraction: "water"
     },
     {
       preview: require("@/assets/img/characters_preview/fire_2.png"),
       image: require("@/assets/img/characters/fire_2.png"),
-      name: "Shantis",
+      name: "Zafira",
       description:
-        " Unbridled anger accompanied Shantis throughout his life.  Due to the harsh trials of life, he had to curb the element of fire, his temper became his assistant and companion.  Now, anyone who crosses his path will suffer from the wild attack of the furious wall of fire that Shantis emits.",
+        " Someone will say: “Ruthless killer of innocent animals», other, who knows her will say: “charitable and loving”. She is a natural embodiment of the contrasts of the elements. Zafira can destroy enemies without pity or regret, hunt down and strike terror into their hearts. But those who know her closely are sure that she does this for protection of her home and lovely ones.",
       color: "#E12424",
       fraction: "fire"
     }

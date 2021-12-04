@@ -12,11 +12,11 @@ module.exports = {
   mode: "jit",
   theme: {
     colors: {
-      orange: "#FF5A36",
+      orange: "#E86B2C",
       transparent: "transparent",
       primary: "var(--color-primary)",
       white: "white",
-      bg: "#201D1B",
+      bg: "#14141400",
       black: "#000000"
     },
     fontFamily: {
@@ -32,7 +32,8 @@ module.exports = {
       xxs: { max: "350px" }
     },
     boxShadow: {
-      main: '0px 0px 50px var(--color-primary)'
+      main: '0px 0px 50px var(--color-primary)',
+      primary: '0px 0px 20px 1px var(--color-primary)'
     },
     extend: {
       spacing: {
