@@ -15,8 +15,8 @@ on:
 env:
   DEPLOY_PATH: /var/www/crypto.lixometr.com
   # В теории можно собрать не только Vue-приложение, так как принцип сборки мало где отличается
-  BUILD_SCRIPT: npm run build
-  BUILD_SCRIPT_OUTPUT: .
+  BUILD_SCRIPT: npm run generate
+  BUILD_SCRIPT_OUTPUT: dist
   BRANCH_NAME: production
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -32,11 +32,11 @@ jobs:
         with:
           node-version: '14'
       # Устанавливаем зависимости для сборки
-      # - name: Install Dependencies
-      #   run: npm i
+      - name: Install Dependencies
+        run: npm i
       # Собираем приложение
-      # - name: Build Appliction
-      #   run: $BUILD_SCRIPT
+      - name: Build Appliction
+        run: $BUILD_SCRIPT
       # Доставляем собранное приложение на сервер
       - name: Deploy to Server
         uses: appleboy/scp-action@master
@@ -48,17 +48,5 @@ jobs:
           source: ${{ env.BUILD_SCRIPT_OUTPUT }}
           target: ${{ env.DEPLOY_PATH }}/${{ env.BRANCH_NAME }}
           strip_components: 1
-      # - name: Print Info
-      #   run: echo "Deployed at https://crypto.lixometr.com/"
-      - name: Restarting process
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DEPLOY_SERVER_HOST }}
-          username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
-          key: ${{ secrets.DEPLOY_SECRET_KEY }}
-          port: ${{ secrets.DEPLOY_SERVER_PORT }}
-          script: |
-            cd /var/www/crypto.lixometr.com/production
-            npm i
-            npm run build
-            pm2 restart crypto
+      - name: Print Info
+        run: echo "Deployed at https://crypto.lixometr.com/"
