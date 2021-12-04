@@ -1,5 +1,9 @@
 <template>
-  <div class="whitepaper-sidebar" :class="{ open: isOpen }" data-scroll data-scroll-sticky data-scroll-target=".smooth-scroll">
+  <div
+    ref="el"
+    class="whitepaper-sidebar"
+    :class="{ open: isOpen }"
+  >
     <div class="whitepaper-sidebar__title">
       Menu
     </div>
@@ -54,9 +58,11 @@ export default {
   mounted() {
     this.checkOpen();
     this.addListeners();
+    document.body.appendChild(this.$refs.el);
   },
   beforeDestroy() {
     this.removeListeners();
+    document.body.removeChild(this.$refs.el);
   }
 };
 </script>
@@ -65,7 +71,7 @@ export default {
 .whitepaper-sidebar {
   @apply fixed left-0 top-0 bottom-0 overflow-scroll
      h-full pt-[150px] xl:pt-[120px] w-[350px] lg:w-[310px] flex flex-col items-center border-r border-white border-opacity-30
-     transform -translate-x-full md:border-none md:w-[80%] xs:w-[70%];
+     transform -translate-x-full md:border-none md:max-w-[310px] md:w-[80%] xs:w-[70%];
   @screen md {
     background: linear-gradient(180deg, #080823 0%, #0c061b 100%);
   }
