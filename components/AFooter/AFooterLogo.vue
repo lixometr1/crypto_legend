@@ -15,7 +15,7 @@ export default {
 .footer-logo {
     @apply w-[300px] flex-shrink-0 xl:w-[160px] xs:w-auto xs:mb-4;
     svg {
-        @apply w-[3.75rem] xl:w-[100px];
+        @apply w-[3.75rem] xl:w-[60px];
     }
 }
 </style>

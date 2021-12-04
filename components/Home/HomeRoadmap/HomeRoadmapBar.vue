@@ -80,7 +80,7 @@ export default {
 
 <style lang="postcss">
 .home-roadmap-bar {
-  @apply h-[156px] flex-y-center backdrop-filter backdrop-blur-[15px]
+  @apply h-[156px] flex-y-center backdrop-filter backdrop-blur-[8px]
     xl:h-[104px] lg:h-[80px] md:h-[62px] border-t border-white border-opacity-50;
   &-wrapper {
     @apply mt-auto transform -translate-y-full absolute left-0 right-0;
@@ -96,11 +96,15 @@ export default {
   &__item {
     @apply w-[3.75rem] h-[3.75rem] bg-primary rounded-full flex-center font-semibold
     relative z-20 bg-[#515151] border-[5px] border-[#444444] border-solid hover:bg-primary hover:shadow-main hover:border-primary transition-all
-    xl:h-10 xl:w-10 xl:text-sm xl:border-2 lg:w-8 lg:h-8 lg:text-xs md:w-6 md:h-6 sm:w-3 sm:h-3;
+    xl:h-10 xl:w-10 xl:text-sm xl:border-2 lg:w-8 lg:h-8 lg:text-xs md:w-6 md:h-6 sm:w-4 sm:h-4;
     span {
       @apply sm:hidden;
     }
     &.active {
+      span{
+        color:#121212;
+        font-weight:900;
+      }
       @apply bg-primary shadow-main border-primary;
     }
   }

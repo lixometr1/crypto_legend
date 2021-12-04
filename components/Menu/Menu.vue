@@ -161,10 +161,10 @@ export default {
 <style lang="postcss">
 .menu {
   @apply fixed z-200 top-0 left-0 right-0 bottom-0 w-full h-full 
-    bg-black bg-opacity-20 backdrop-filter backdrop-blur-[30px]
+    bg-black bg-opacity-20 backdrop-filter backdrop-blur-[15px]
     py-[100px] xl:py-[50px];
   &-title {
-    @apply text-4xl text-[#8E8E8E] mb-5;
+    @apply text-4xl text-[#8E8E8E] mb-5 ;
   }
   &-inner-wrapper {
     @apply flex flex-col h-full;

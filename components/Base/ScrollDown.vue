@@ -25,10 +25,10 @@ export default {
   @apply absolute left-1/2 transform -translate-x-1/2 bottom-8  text-white flex-center
     md:flex-col hover:text-primary transition-all;
   svg {
-    @apply xl:w-4 md:order-2  md:w-3 sm:w-2.5;
+    @apply xl:w-4 md:order-2  md:w-3 sm:w-2.5 ;
   }
   span {
-    @apply ml-2 uppercase text-lg font-bold sm:text-[10px] md:order-1 md:ml-0 md:mb-2;
+    @apply ml-2 uppercase text-lg font-bold sm:text-[10px] md:order-1 md:ml-0 md:mb-2 ;
   }
 }
 </style>

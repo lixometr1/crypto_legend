@@ -6,7 +6,7 @@
     <HomeCharacters class="home-screen-full" ref="section4" />
     <HomeNft class="home-screen-full" ref="section5" />
     <HomeEcosystem />
-    <!-- <HomePartners class="" /> -->
+    <HomePartners class="" />
     <HomeContact class="" />
   </div>
 </template>

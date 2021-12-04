@@ -30,7 +30,7 @@ import HomeSectionMixin from '@/components/Home/HomeSectionMixin'
 export default {
   mixins: [HomeSectionMixin],
   data: () => ({
-    activeFilter: 1,
+    activeFilter: 2,
     items: homeNftData
   }),
   computed: {
@@ -55,13 +55,13 @@ export default {
     @apply flex items-stretch justify-between w-full md:flex-col md:items-center;
   }
   &__left {
-    @apply flex-shrink-0 flex flex-col items-stretch justify-start lg:mr-5 md:items-center lg:w-[450px] sm:w-full;
+    @apply flex-shrink-0 flex flex-col items-stretch justify-start lg:mr-5 md:items-start lg:w-[450px] sm:w-full ;
   }
   &__right {
     @apply min-w-0 md:w-full;
   }
   &__content {
-    @apply flex-1 flex flex-col items-stretch justify-start xl:justify-between;
+    @apply flex-1 flex flex-col items-stretch justify-start xl:justify-between ;
   }
   &__filters {
     @apply md:order-2 md:mt-3 sm:mt-6 xs:mt-5;

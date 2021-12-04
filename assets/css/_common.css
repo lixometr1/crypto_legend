@@ -1,4 +1,5 @@
 body {
+  background: linear-gradient(90deg, #121212, #292929)!important;
   @apply font-main text-white bg-bg text-lg sm:text-sm leading-tight;
 }
 .container {

@@ -23,14 +23,18 @@ export default {
 
 <style lang="postcss">
 .team-card {
+  /* margin-bottom: 24px; */
   @apply text-white rounded-[25px] overflow-hidden 
-    sm:flex sm:items-stretch sm:min-h-[180px] xs:min-h-[80px] xs:rounded-[15px];
+    sm:flex sm:items-stretch sm:min-h-[180px] xs:min-h-[80px] xs:rounded-[15px] xl:mb-4 sm:mb-0; 
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.05);
 
   &__content {
-    @apply py-7 px-8  rounded-br-[25px] rounded-bl-[25px] md:bg-[#88786E]
-      md:rounded-bl-none md:flex-1 bg-[#88786E] md:flex md:justify-center md:flex-col
+    background: linear-gradient(to left, #161616, #272727);
+    @apply py-7 px-8  rounded-br-[25px] rounded-bl-[25px] 
+      md:rounded-bl-none md:flex-1 md:flex md:justify-center md:flex-col 
       xs:px-4 xs:rounded-br-[15px];
+      //md:bg-[#555]
+      //bg-[#555]
   }
   &__image {
     @apply bg-center bg-cover bg-no-repeat h-[350px] rounded-tr-[25px] rounded-tl-[25px] xl:h-[260px] 
