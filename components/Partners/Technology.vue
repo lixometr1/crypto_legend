@@ -21,7 +21,7 @@ export default {
 <style lang="postcss">
 .partners {
   &-items {
-    @apply flex flex-wrap justify-between items-center -mx-10 lg:-mx-6;
+    @apply flex flex-wrap justify-center items-center -mx-10 lg:-mx-6;
   }
   &-item {
     @apply w-1/5 p-10 lg:p-6 md:w-1/4 sm:p-4;
