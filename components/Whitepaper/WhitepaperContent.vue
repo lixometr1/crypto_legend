@@ -1,13 +1,14 @@
 <template>
   <div class="whitepaper-content">
-    <div v-html="content"></div>
+    <slot>
+      <div v-html="content"></div>
+    </slot>
     <WhitepaperControls class="mt-8" />
   </div>
 </template>
 
 <script>
 export default {
-
   props: {
     content: String
   },

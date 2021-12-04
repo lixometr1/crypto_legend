@@ -31,8 +31,10 @@ export default {
 </script>
 
 <style lang="postcss">
+.page-whitepaper {
+  @apply relative z-10;
+}
 .whitepaper {
-  @apply relative;
   &-page {
   }
   &-row {
