@@ -37,7 +37,7 @@ export default {
   }),
   computed: {
     hasChildren() {
-      return this.children.length > 0;
+      return this.children.length > 0 && this.$route.params.slug === this.slug;
     }
   },
   methods: {
@@ -45,14 +45,14 @@ export default {
       this.isOpen = !this.isOpen;
     },
     onItemSelect(item) {
-      console.log('emiting')
       this.$nuxt.$emit("whitepaper:select", item.id);
     },
     clickItem() {
       if (this.isChild) {
         this.$emit("select");
       } else {
-        if (this.$route.params.slug === this.slug) {
+        if (this.$route.params.slug !== this.slug) {
+          console.log('hey', this.$route.params.slug)
           this.$router.push(`/whitepaper/${this.slug}`);
         } else {
           this.toggle();

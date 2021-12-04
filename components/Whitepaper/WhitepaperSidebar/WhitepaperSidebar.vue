@@ -65,7 +65,10 @@ export default {
 .whitepaper-sidebar {
   @apply fixed left-0 top-0 bottom-0 overflow-scroll
      h-full pt-[150px] xl:pt-[120px] w-[350px] lg:w-[310px] flex flex-col items-center border-r border-white border-opacity-30
-     transform -translate-x-full;
+     transform -translate-x-full md:border-none md:w-[80%] xs:w-[70%];
+  @screen md {
+    background: linear-gradient(180deg, #080823 0%, #0c061b 100%);
+  }
   &__title {
     @apply uppercase text-[#676D7D] w-[180px] mb-3;
   }

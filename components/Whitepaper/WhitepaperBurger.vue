@@ -1,13 +1,15 @@
 <template>
   <div class="whitepaper-burger" :class="{ open: isOpen }" @click="toggleMenu">
-    <svgBurger width="28"/>
+    <svgClose width="16" v-if="isOpen" />
+    <svgBurger width="28" v-else />
   </div>
 </template>
 
 <script>
 import svgBurger from "@/assets/icons/whitepaper_burger.svg?inline";
+import svgClose from "@/assets/icons/whitepaper_close.svg?inline";
 export default {
-  components: { svgBurger },
+  components: { svgBurger, svgClose },
   data: () => ({
     isOpen: false
   }),
@@ -33,11 +35,12 @@ export default {
 
 <style lang="postcss">
 .whitepaper-burger {
-  @apply w-[50px] h-[38px] bg-[#1F1E23] flex-center rounded-md cursor-pointer;
+  @apply hidden md:flex w-[50px] h-[38px] bg-[#1F1E23] items-center justify-center rounded-md cursor-pointer;
   span {
     @apply w-7 h-1 bg-white;
   }
   &.open {
+    @apply bg-white text-black;
   }
 }
 </style>
