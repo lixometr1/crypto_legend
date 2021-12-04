@@ -1,5 +1,6 @@
 <template>
-  <div class="whitepaper-sidebar" :class="{ open: isOpen }" data-scroll data-scroll-sticky data-scroll-target=".smooth-scroll">
+<!-- data-scroll data-scroll-sticky data-scroll-target=".smooth-scroll" -->
+  <div class="whitepaper-sidebar" :class="{ open: isOpen }" >
     <div class="whitepaper-sidebar__title">
       Menu
     </div>
