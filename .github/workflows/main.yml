@@ -16,7 +16,7 @@ env:
   DEPLOY_PATH: /var/www/crypto.lixometr.com
   # В теории можно собрать не только Vue-приложение, так как принцип сборки мало где отличается
   BUILD_SCRIPT: npm run build
-  BUILD_SCRIPT_OUTPUT: .nuxt
+  BUILD_SCRIPT_OUTPUT: dist
   BRANCH_NAME: production
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
