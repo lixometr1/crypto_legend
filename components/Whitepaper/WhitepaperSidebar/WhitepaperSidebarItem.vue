@@ -37,10 +37,12 @@ export default {
   }),
   computed: {
     currentSlug() {
-      console.log(this.$route);
       const arr = this.$route.fullPath.split("/");
-      const slug = arr[arr.length - 1];
-      return slug.replace(/\//g, '');
+      let slug = arr[arr.length - 1];
+      if (!slug) {
+        slug = arr[arr.length - 2];
+      }
+      return slug;
     },
     hasChildren() {
       return this.children.length > 0 && this.currentSlug === this.slug;
