@@ -40,7 +40,7 @@ export default {
       console.log(this.$route);
       const arr = this.$route.fullPath.split("/");
       const slug = arr[arr.length - 1];
-      return slug;
+      return slug.replace(/\//g, '');
     },
     hasChildren() {
       return this.children.length > 0 && this.currentSlug === this.slug;
