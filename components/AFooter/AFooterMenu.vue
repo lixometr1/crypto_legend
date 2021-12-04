@@ -21,8 +21,9 @@ export default {
       {
         items: [
           {
-            title: "Home"
-          },
+            title: "Home",
+            link: "#"
+          }
           // {
           //   title: "Team"
           // }
@@ -31,8 +32,9 @@ export default {
       {
         items: [
           {
-            title: "DAPP"
-          },
+            title: "DAPP",
+            link: "#"
+          }
           // {
           //   title: "Stacking"
           // }
@@ -44,7 +46,8 @@ export default {
           //   title: "Buy Token"
           // },
           {
-            title: "Whitepapper"
+            title: "Whitepapper",
+            link: "#"
           }
         ]
       },
@@ -53,7 +56,7 @@ export default {
           {
             title: "Blog",
             link: "/blog"
-          },
+          }
           // {
           //   title: "Privacy Policy"
           // }
@@ -80,7 +83,7 @@ export default {
   &__col {
     @apply space-y-3 md:w-1/2 xs:w-full mb-3;
     a {
-        @apply block text-lg font-light hover:underline md:text-sm;
+      @apply block text-lg font-light hover:underline md:text-sm;
     }
   }
 }

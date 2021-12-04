@@ -36,8 +36,14 @@ export default {
     isOpen: false
   }),
   computed: {
+    currentSlug() {
+      console.log(this.$route);
+      const arr = this.$route.fullPath.split("/");
+      const slug = arr[arr.length - 1];
+      return slug;
+    },
     hasChildren() {
-      return this.children.length > 0 && this.$route.params.slug === this.slug;
+      return this.children.length > 0 && this.currentSlug === this.slug;
     }
   },
   methods: {
@@ -51,8 +57,7 @@ export default {
       if (this.isChild) {
         this.$emit("select");
       } else {
-        if (this.$route.params.slug !== this.slug) {
-          console.log('hey', this.$route.params.slug)
+        if (this.currentSlug !== this.slug) {
           this.$router.push(`/whitepaper/${this.slug}`);
         } else {
           this.toggle();
