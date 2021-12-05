@@ -20,10 +20,10 @@ export default {
   },
   data: () => ({
     items: [
-      // {
-      //   value: 1,
-      //   icon: require("@/assets/icons/nft/1.svg?inline")
-      // },
+      {
+        value: 1,
+        icon: require("@/assets/icons/nft/1.svg?inline")
+      },
       {
         value: 2,
         icon: require("@/assets/icons/nft/2.svg?inline")
