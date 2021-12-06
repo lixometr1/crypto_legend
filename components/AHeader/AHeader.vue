@@ -22,10 +22,10 @@ export default {
     this.checkMenu();
   },
   beforeMount() {
-    this.$nuxt.$on("menu:open", () => {
+    this.$nuxt.$on("header:hide", () => {
       this.menuOpen = true;
     });
-    this.$nuxt.$on("menu:afterClose", () => {
+    this.$nuxt.$on("header:show", () => {
       this.menuOpen = false;
     });
   },

@@ -101,6 +101,8 @@ export default {
       const tl = gsap.timeline({
         onComplete: () => {
           this.$nuxt.$emit("menu:afterClose");
+          this.$nuxt.$emit("header:show");
+          this.$nuxt.$emit("navbar:show");
           done();
         }
       });

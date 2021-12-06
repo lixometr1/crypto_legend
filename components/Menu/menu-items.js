@@ -9,7 +9,7 @@ export default [
   // },
   {
     name: "Home",
-    link: '/'
+    link: "/"
   },
   {
     name: "Dapp",
@@ -27,8 +27,10 @@ export default [
         name: "NFT Marketplace"
       },
       {
-        name: "Solana NFT"
-      },
+        name: "Solana NFT",
+        external: true,
+        newWindow: true
+      }
     ]
   },
   // {
@@ -71,5 +73,5 @@ export default [
   {
     name: "Whitepapper",
     link: "/whitepapper"
-  },
+  }
 ];

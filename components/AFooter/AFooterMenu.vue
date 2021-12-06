@@ -1,15 +1,17 @@
 <template>
   <div class="footer-menu">
     <div class="footer-menu__col" v-for="(col, idx) in cols" :key="idx">
-      <a
+      <component
+        :is="item.external ? 'a' : 'nuxt-link'"
         :href="item.link"
-        @click.prevent
+        :to="item.link || '#'"
         class="footer-menu-item"
         v-for="(item, index) in col.items"
         :key="index"
+        :target="item.newWindow ? '_blank' : ''"
       >
         {{ item.title }}
-      </a>
+      </component>
     </div>
   </div>
 </template>
@@ -22,7 +24,10 @@ export default {
         items: [
           {
             title: "Home",
-            link: "#"
+            link: "#",
+            newWindow: true,
+            // внешняя
+            external: true
           }
           // {
           //   title: "Team"

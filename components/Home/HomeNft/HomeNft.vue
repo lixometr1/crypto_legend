@@ -15,7 +15,7 @@
         </div>
         <div class="home-nft__right">
           <div class="home-nft__slider">
-            <HomeNftSlider :items="sliderItems" />
+            <HomeNftSlider :items="sliderItems" :isHero="activeItem.hero_wrap" />
           </div>
           <HomeNftInfo v-bind="activeItem" class="hidden md:block" />
         </div>
@@ -30,7 +30,7 @@ import HomeSectionMixin from '@/components/Home/HomeSectionMixin'
 export default {
   mixins: [HomeSectionMixin],
   data: () => ({
-    activeFilter: 2,
+    activeFilter: 1,
     items: homeNftData
   }),
   computed: {
@@ -38,9 +38,12 @@ export default {
       const items = this.items[this.activeFilter]?.items || [];
       return items;
     },
+      heroWrap(){
+        return this.items[this.activeFilter].hero_wrap || false;
+    },
     activeItem() {
       return this.items[this.activeFilter] || {};
-    }
+    },
   },
   mounted() {
     

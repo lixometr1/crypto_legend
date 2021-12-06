@@ -32,6 +32,8 @@ export default {
     },
     open() {
       this.$nuxt.$emit("menu:open");
+      this.$nuxt.$emit("navbar:hide");
+      this.$nuxt.$emit("header:hide");
     },
     close() {
       this.$nuxt.$emit("menu:close");

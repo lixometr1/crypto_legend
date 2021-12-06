@@ -10,6 +10,7 @@
     </div>
     <Menu />
     <NavBar />
+    <VideoModal />
   </div>
 </template>
 
