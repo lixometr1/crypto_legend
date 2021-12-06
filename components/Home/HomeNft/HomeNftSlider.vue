@@ -91,32 +91,36 @@ export default {
 .home-nft-slider {
   &-wrapper {
     @apply flex items-stretch space-x-4 h-[485px] xl:h-[400px] md:h-[315px] sm:h-[215px] xs:h-[150px] sm:space-x-2;
-    
   }
-  
+
   &__image {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(86, 227, 232, 0.14) 0%, rgba(86, 227, 232, 0.05) 35.42%, rgba(29, 29, 29, 0) 90%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(86, 227, 232, 0.14) 0%,
+      rgba(86, 227, 232, 0.05) 35.42%,
+      rgba(29, 29, 29, 0) 90%
+    );
     @apply h-full w-[485px] xl:w-[400px] flex-center bg-white bg-opacity-5 backdrop-filter backdrop-blur-[20px]
-        rounded-md border border-white border-opacity-40  md:w-full ;
+        rounded-md border border-white border-opacity-40  md:w-full;
     img {
       @apply w-full max-h-full object-contain;
-      max-height: 110%  ;
+      max-height: 110%;
     }
   }
-  &__image.hero_wrap{
-      padding: 0;
-      align-items: flex-end;
+  &__image.hero_wrap {
+    padding: 0;
+    align-items: flex-end;
     img {
       max-height: 120%;
     }
   }
-    &__thumb.hero_wrap {
-      align-items: flex-end!important;  
-      padding: 0!important;
-    }
+  &__thumb.hero_wrap {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
 
   &__thumbs {
-    @apply w-[4.375rem] flex-shrink-0 mb-[-15px] lg:w-[4rem] md:w-14 md:mb-[-6px] sm:mb-[-4px] sm:w-9 xs:w-7 ;
+    @apply w-[4.375rem] flex-shrink-0 mb-[-15px] lg:w-[4rem] md:w-14 md:mb-[-6px] sm:mb-[-4px] sm:w-9 xs:w-7;
   }
   &__thumb {
     @apply p-2.5 flex-auto w-full h-[4.375rem] rounded-md border border-white border-opacity-20 flex-center

@@ -42,7 +42,6 @@ export default {
         return this.items[this.activeFilter].hero_wrap || false;
     },
     activeItem() {
-      console.log("HERO_WRAP: ",this.items[this.activeFilter].hero_wrap || false)
       return this.items[this.activeFilter] || {};
     },
   },

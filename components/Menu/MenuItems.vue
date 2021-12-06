@@ -20,15 +20,28 @@ export default {
     }
   },
   methods: {
+    goToLink(item) {
+      if (item.external) {
+        if (item.newWindow) {
+          window.open(item.link, "_blank") ||
+            window.location.replace(item.link);
+        } else {
+          window.location = item.link;
+        }
+      } else {
+        this.$router.push(item.link);
+      }
+    },
     clickItem(idx) {
       const currentItem = this.items[idx];
+
       if (currentItem.children) {
         this.$emit("input", idx);
       } else {
         this.$nuxt.$emit("menu:close");
         const afterClose = () => {
           if (currentItem.link) {
-            this.$router.push(currentItem.link);
+            this.goToLink(currentItem);
           }
           this.$nuxt.$off("menu:afterClose", afterClose);
         };

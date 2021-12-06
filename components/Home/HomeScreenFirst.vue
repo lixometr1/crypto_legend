@@ -7,6 +7,8 @@
         </div>
         <div class="home-screen-first__buttons">
           <a-button
+            href="https://google.com"
+            target="_blank"
             type="primary"
             size="lg"
             class="home-screen-first__btn home-screen-first__btn-primary"
@@ -14,8 +16,10 @@
           >
           <a-button
             type="blur"
+            href="#"
             size="lg"
             class="home-screen-first__btn home-screen-first__btn-second"
+            @click.prevent="openVideo"
           >
             <span>TRAILER</span>
           </a-button>
@@ -61,6 +65,9 @@ export default {
   methods: {
     scrollNext() {
       this.$nuxt.$emit("scrollNextSection");
+    },
+    openVideo() {
+      this.$nuxt.$emit("modal:show:video");
     },
 
     paralax() {
@@ -124,37 +131,39 @@ export default {
   &__btn {
     &-primary {
       @apply text-white !important;
-      background: linear-gradient(91.8deg, rgba(196, 119, 81, 0.7) 0%, rgba(152, 113, 132, 0.7) 100%) !important;
-      box-shadow: 
-        3px 16px 15px -15px rgba(0, 0, 0, 0.25)
-       /* -2px -4px 15px rgba(255, 255, 255, 0.35)  */
-       !important;
+      background: linear-gradient(
+        91.8deg,
+        rgba(196, 119, 81, 0.7) 0%,
+        rgba(152, 113, 132, 0.7) 100%
+      ) !important;
+      box-shadow: 3px 16px 15px -15px rgba(0, 0, 0, 0.25) /* -2px -4px 15px rgba(255, 255, 255, 0.35)  */ !important;
       border-radius: 3px !important;
       &:hover {
-        box-shadow:  0px 20px 25px -15px rgba(0, 0, 0, 0.45)!important;
+        box-shadow: 0px 20px 25px -15px rgba(0, 0, 0, 0.45) !important;
         /* margin-bottom:-8px; */
-        background: linear-gradient(91.8deg, rgba(196, 119, 81, 1) 0%, rgba(152, 113, 132, 1) 100%) !important;
+        background: linear-gradient(
+          91.8deg,
+          rgba(196, 119, 81, 1) 0%,
+          rgba(152, 113, 132, 1) 100%
+        ) !important;
         @apply opacity-100;
         /* box-shadow: 3px 6px 15px -2px rgba(0, 0, 0, 0.25), -2px -4px 10px rgba(255, 255, 255, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.35) !important; */
       }
     }
     &-second {
       @apply text-white border-none !important;
-      background: rgba(255, 255, 255, 0.1)  !important;
-      box-shadow: 
-      3px 16px 15px -15px rgba(0, 0, 0, 0.25)
-      /* -2px -4px 15px rgba(255, 255, 255, 0.35)  */
-      !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 3px 16px 15px -15px rgba(0, 0, 0, 0.25) /* -2px -4px 15px rgba(255, 255, 255, 0.35)  */ !important;
       border-radius: 3px !important;
       &:hover {
-        box-shadow:  0px 20px 25px -15px rgba(0, 0, 0, 0.45) !important;
-        background: rgba(255, 255, 255, .65)  !important;
-        
+        box-shadow: 0px 20px 25px -15px rgba(0, 0, 0, 0.45) !important;
+        background: rgba(255, 255, 255, 0.65) !important;
+
         /* background: linear-gradient(91.8deg, rgba(196, 119, 81, 1) 0%, rgba(152, 113, 132, 1) 100%) !important; */
         /* margin-bottom:-8px; */
         @apply opacity-100;
-        span{
-          color:rgba(0, 0, 0, 0.75)
+        span {
+          color: rgba(0, 0, 0, 0.75);
         }
       }
     }

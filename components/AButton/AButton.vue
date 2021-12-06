@@ -19,7 +19,7 @@ export default {
     },
     tag: {
       type: String,
-      default: "button"
+      default: "a"
     },
     // lg, md, sm
     size: {

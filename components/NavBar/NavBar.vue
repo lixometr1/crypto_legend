@@ -20,10 +20,10 @@ export default {
     this.$nuxt.$on("nav:progress", val => {
       this.progress = val;
     });
-    this.$nuxt.$on("menu:open", () => {
+    this.$nuxt.$on("navbar:hide", () => {
       this.isHidden = true;
     });
-    this.$nuxt.$on("menu:afterClose", () => {
+    this.$nuxt.$on("navbar:show", () => {
       this.isHidden = false;
     });
   },
