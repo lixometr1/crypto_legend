@@ -1,27 +1,21 @@
 <template>
   <div>
     <WhitepaperContent>
-      <div id="first">
-        <h2>
-          Intro 222
-        </h2>
+      <div id="Goal">
+        <h2>Goal</h2>
         <p>
-          You take the role of a survivor of a transport vessel in an
-          intergalactic space fleet, investigating a perplexing distress beacon.
-          When you finally reach the origin of the call, you discover a ruined
-          planet, possibly the mythical cradle of your race’s civilization. A
-          vast crystal ocean engulfs all but a tiny fraction of the planet.
-          Extreme weather events assault the surface, giving way to strikingly
-          varied climates. A burst of radiation disables the ship’s engines and
-          you slam into the planet’s surface. Crawling free from the wreckage,
-          you discover majestic beasts, some with near godlike power. Could this
-          be what caused the downfall of this planet? Luckily, your race has
-          begun to master the same energy that the Illuvials harness, and you
-          are able to capture and control the deity-like fauna into slivers of
-          crystal called Shards, mined from the planet’s surface. To uncover the
-          mysteries of the planet, you become a Hunter, traveling across the
-          land subduing and capturing Illuvials, and trying to unlock the
-          Obelisks that keep most of the world closed off.
+          Below is a list of some of the foundational points of Impulse: 
+          <ul>
+            <li> Impulse empowers players to own their digital assets in reality.</li> 
+            <li> The IMP token has the following goals: governance, decentralization, stimulation.</li>
+              <ul> 
+                <li> The demand for IMP is driven by the natural stimulation of the community and developers to achieve all goals.</li> 
+                <li> Total supply IMP is 137,000,000 (137 million).</li> 
+              </ul>
+            <li> IMP is used as a commission for the community to release new content . </li>
+            <li> The total in-game commission will be set in a static form for all operations of creating new content.</li>
+            <li> NFTs are being used as a solution to the content ownership problem. </li>
+          </ul>
         </p>
       </div>
       <div id="second">

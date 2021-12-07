@@ -1,7 +1,7 @@
 export default [
   {
-    value: "Distributed",
-    slug: "test1",
+    value: "About project",
+    slug: "about-project",
     children: [
       {
         value: "Intro",
@@ -20,8 +20,8 @@ export default [
     ]
   },
   {
-    value: "Test 2",
-    slug: "test2",
+    value: "Goal",
+    slug: "пoal",
     children: [
       {
         value: "Intro",
