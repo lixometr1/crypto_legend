@@ -5,7 +5,7 @@
     :class="{ open: isOpen }"
   >
     <div class="whitepaper-sidebar__title">
-      Menu
+      Whitepaper
     </div>
     <div class="whitepaper-sidebar__items">
       <WhitepaperSidebarItem

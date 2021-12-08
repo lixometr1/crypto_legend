@@ -25,13 +25,14 @@
           <div class="comming_soon sm:!hidden">comming soon</div>
       </div>
       <div class="btn_container">
-        <AButton
-          type="primary-stroke"
-          size="sm"
-          class="home-nft-info__btn sm:!hidden opensea" 
-        >
-          OpenSea
-        </AButton>
+        <AButton 
+            href="#"
+            type="primary-stroke" 
+            size="sm" 
+            class="home-nft-info__btn opensea sm:!hidden"
+            >OpenSea
+
+            </AButton >
       </div>
       
     </div>
@@ -45,9 +46,17 @@
       </div>
 
       <div class="btn_container">
-      <AButton type="primary-stroke" size="sm" class="home-nft-info__btn opensea">
+        <AButton 
+            href="#"
+            type="primary-stroke" 
+            size="sm" 
+            class="home-nft-info__btn opensea "
+            >OpenSea
+
+            </AButton >
+      <!-- <AButton >
         OpenSea
-      </AButton>
+      </AButton> -->
       </div>
       
 

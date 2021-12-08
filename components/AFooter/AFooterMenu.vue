@@ -24,8 +24,8 @@ export default {
         items: [
           {
             title: "Home",
-            link: "#",
-            newWindow: true,
+            link: "https://impulse.game",
+            // newWindow: true,
             // внешняя
             external: true
           }
@@ -52,15 +52,16 @@ export default {
           // },
           {
             title: "Whitepapper",
-            link: "#"
+            link: "/whitepaper/1"
           }
         ]
       },
       {
         items: [
           {
-            title: "Blog",
-            link: "/blog"
+            title: "Airdrop",
+            link: "https://gleam.io/21TP6/airdrop",
+            newWindow: true,
           }
           // {
           //   title: "Privacy Policy"
@@ -72,9 +73,9 @@ export default {
           // {
           //   title: "Contact"
           // },
-          {
-            title: "About Airdrop"
-          }
+          // {
+          //   title: "About Airdrop"
+          // }
         ]
       }
     ]

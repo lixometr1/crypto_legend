@@ -4,24 +4,24 @@ export default {
     name: "Want buy some NFT?",
     title: "NFT HERO SKINS",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "The first limited collection of NTF skins. Collect, play, earn. Only 100 skins. From December 15 ...",
     k: "0.053",
     price: "$200",
     itemId: "#7795",
     hero_wrap:true,
     items: [
       {
-        image: require("@/assets/img/nft_slider/nft_air_1.png"),
+        image: require("@/assets/img/nft_slider/nft_water_5.png"),
         color:'#333444'
       },
       {
-        image: require("@/assets/img/nft_slider/nft_air_2.png")
+        image: require("@/assets/img/nft_slider/nft_water_4.png")
       },
       {
-        image: require("@/assets/img/nft_slider/nft_fire_1.png")
+        image: require("@/assets/img/nft_slider/nft_water_3.png")
       },
       {
-        image: require("@/assets/img/nft_slider/nft_fire_2.png")
+        image: require("@/assets/img/nft_slider/nft_water_2.png")
       },
       {
         image: require("@/assets/img/nft_slider/nft_water_1.png")
