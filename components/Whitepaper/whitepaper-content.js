@@ -1,8 +1,8 @@
 export default [
   {
-    slug: "test1",
-    content: `
-    <div id="first"> <h2>
+    slug: "about-project",
+    content: `   <div id="first">
+        <h2>
     Intro
     </h2>
     <p>
@@ -14,7 +14,7 @@ export default [
     </div>`
   },
   {
-    slug: 'test2',
+    slug: 'goal',
     content : `<div id="first">
     <h2>
 Intro 22

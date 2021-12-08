@@ -29,7 +29,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="home-ecosystem__btn">WHITEPAPPER</a>
+          <a href="/whitepaper/1" class="home-ecosystem__btn">WHITEPAPPER</a>
         </div>
         <div class="home-ecosystem__image">
           <img

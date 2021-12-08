@@ -5,7 +5,7 @@
     :class="{ open: isOpen }"
   >
     <div class="whitepaper-sidebar__title">
-      Menu
+      Whitepaper
     </div>
     <div class="whitepaper-sidebar__items">
       <WhitepaperSidebarItem
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import PageProgressMixin from '~/mixins/PageProgressMixin';
 export default {
   props: {
     items: {
@@ -25,6 +26,7 @@ export default {
       default: () => []
     }
   },
+  mixins: [PageProgressMixin],
   data: () => ({
     isOpen: false
   }),
@@ -69,7 +71,7 @@ export default {
 
 <style lang="postcss">
 .whitepaper-sidebar {
-  @apply fixed left-0 top-0 bottom-0 overflow-scroll
+  @apply fixed left-0 top-0 bottom-0 overflow-y-auto overflow-x-hidden
      h-full pt-[150px] xl:pt-[120px] w-[350px] lg:w-[310px] flex flex-col items-center border-r border-white border-opacity-30
      transform -translate-x-full md:border-none md:max-w-[310px] md:w-[80%] xs:w-[70%];
   @screen md {

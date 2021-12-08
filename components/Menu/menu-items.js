@@ -26,11 +26,11 @@ export default [
       {
         name: "NFT Marketplace"
       },
-      {
-        name: "Solana NFT",
-        external: true,
-        newWindow: true
-      }
+      // {
+      //   name: "Solana NFT",
+      //   external: true,
+      //   newWindow: true
+      // }
     ]
   },
   // {
@@ -62,16 +62,16 @@ export default [
   //   name: "FAQ",
   //   link: "/faq"
   // },
-  {
-    name: "Blog",
-    link: "/blog"
-  },
+  // {
+  //   name: "Blog",
+  //   link: "https://google.com"
+  // },
   // {
   //   name: "Team",
   //   link: "/team"
   // },
   {
-    name: "Whitepapper",
-    link: "/whitepapper"
+    name: "Whitepaper",
+    link: "/whitepaper/1"
   }
 ];

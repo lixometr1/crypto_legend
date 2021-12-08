@@ -6,7 +6,8 @@
           <div class="home-contact__title">
             <h2 class="uppercase font-normal">Join Our Airdrop</h2>
           </div>
-          <a href="#" class="home-contact__btn">JOIN AIRDROP</a>
+          <a href="https://gleam.io/21TP6/airdrop"
+            target="_blank" class="home-contact__btn">JOIN AIRDROP</a>
           <!-- <SocBtns class="home-contact__soc" /> -->
         </div>
         <div class="home-contact__image">
