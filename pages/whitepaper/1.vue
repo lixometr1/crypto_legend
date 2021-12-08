@@ -192,7 +192,7 @@
 </template>
 
 <script>
-import data from "@/pages/whitepaper/images"
+import data from "@/helpers/whitepaper-images"
 export default {
   computed: {
     currentImage(){
