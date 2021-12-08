@@ -38,11 +38,19 @@ import data from "@/components/Whitepaper/whitepaper-data";
 export default {
   components: { svgArrowRight, svgArrowLeft },
   computed: {
+    currentSlug() {
+      const arr = this.$route.fullPath.split("/");
+      let slug = arr[arr.length - 1];
+      if (!slug) {
+        slug = arr[arr.length - 2];
+      }
+      return slug;
+    },
     currentItem() {
-      return data.find(item => item.slug === this.$route.params.slug);
+      return data.find(item => item.slug === this.currentSlug);
     },
     currentItemIdx() {
-      return data.findIndex(item => item.slug === this.$route.params.slug);
+      return data.findIndex(item => item.slug === this.currentSlug);
     },
     prevName() {
       const prevItem = data[this.currentItemIdx - 1];

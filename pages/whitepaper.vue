@@ -15,12 +15,15 @@
 <script>
 import items from "@/components/Whitepaper/whitepaper-data";
 import content from "@/components/Whitepaper/whitepaper-content";
+import imagesloaded from "imagesloaded";
 export default {
   data: () => ({
     sidebarItems: items
   }),
   mounted() {
-    this.$nuxt.$emit("loco:update");
+    imagesloaded(document.body, () => {
+      this.$nuxt.$emit("loco:update");
+    });
   },
   computed: {
     content() {
