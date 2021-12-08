@@ -7,7 +7,7 @@
         </div>
         <div class="home-screen-first__buttons">
           <a-button
-            href="https://google.com"
+            href="https://gleam.io/21TP6/airdrop"
             target="_blank"
             type="primary"
             size="lg"
