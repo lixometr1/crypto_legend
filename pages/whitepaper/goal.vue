@@ -18,28 +18,7 @@
           </ul>
         </p>
       </div>
-      <div id="second">
-        <h2>What are Illuvials?</h2>
-        <p>
-          The planet’s core spills out a strange radiation that the beasts
-          harness to grow, mutate, and unleash deadly attacks. Some Illuvials
-          are easy to find, some are incredibly rare. They are found across a
-          vast landscape. The radiation itself pulses in a non organic way that
-          seems vaguely familiar. There are more than 100 Illuvials to find and
-          collect throughout the world, each possessing unique abilities. They
-          form symbiotic relationships with one another based on common
-          affinities or classes, called Synergies. Using a Hybrid Synergy
-          System, Illuvials are stronger when working as a team in the Battle
-          Arena so make sure to collect synergising pairs to maximise your
-          chance of victory. Different synergies create different bonuses for
-          your team, allowing you to outplay your opponent—even if they have
-          Illuvials with more raw power than you. Fusion allows you to merge
-          multiple Illuvials of the same type into a more powerful beast, with
-          different attributes, sometimes belonging to a completely different
-          Class or Type. Remember that some Lines of Illuvials are very rare and
-          hard to find, making their Fused form even more difficult to discover
-        </p>
-      </div>
+      
     </WhitepaperContent>
   </div>
 </template>

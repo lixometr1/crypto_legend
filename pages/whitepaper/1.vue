@@ -98,7 +98,7 @@
         </p>
         <img >
       </div>
-      <div id="marketplace">
+      <div id="">
         <h3>Brokerage operations</h3>
         <p>
           The ability to trade or exchange your NFTs not only at the Impulse

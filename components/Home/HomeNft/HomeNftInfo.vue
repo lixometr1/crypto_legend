@@ -26,8 +26,7 @@
       </div>
       <div class="btn_container">
         <AButton 
-            href="https://google.com"
-            target="_blank"
+            href="#"
             type="primary-stroke" 
             size="sm" 
             class="home-nft-info__btn opensea sm:!hidden"
@@ -48,8 +47,7 @@
 
       <div class="btn_container">
         <AButton 
-            href="https://google.com"
-            target="_blank"
+            href="#"
             type="primary-stroke" 
             size="sm" 
             class="home-nft-info__btn opensea "
