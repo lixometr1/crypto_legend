@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import PageProgressMixin from '~/mixins/PageProgressMixin';
 export default {
   props: {
     items: {
@@ -25,6 +26,7 @@ export default {
       default: () => []
     }
   },
+  mixins: [PageProgressMixin],
   data: () => ({
     isOpen: false
   }),
