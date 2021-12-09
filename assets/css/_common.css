@@ -30,7 +30,7 @@ h3,
 
 .c-scrollbar {
   &_thumb {
-    @apply bg-[#444] opacity-20 !important;
+    @apply bg-primary md:opacity-50 xl:opacity-10 !important;
   }
 }
 
