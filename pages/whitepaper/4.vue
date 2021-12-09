@@ -3,6 +3,8 @@
     <WhitepaperContent>
      <div id="imp-token">
         <h2>IMP Token</h2>
+        <img :src="require('@/assets/img/whitepaper/Tokenomics_neon.png')" class="main whitepaper md:hidden" alt="" />
+        <!-- <img :src="require('@/assets/img/whitepaper/Tokenomics_neon_2.png')" class="main whitepaper" alt="" /> -->
          <p>
           IMP is a non-fungible ERC-20 / BEP-20 functional utility token. This
           token is a tradable asset and grants the owner the right to use it for
@@ -11,43 +13,10 @@
           and participate in the gaming ecosystem. The IMP token can only be
           used in Impulse.
         </p>
-        <table border="1">
-          <caption>
-            IMP Information
-          </caption>
-          <tr>
-            <th>Title</th>
-            <th>Detail</th>
-          </tr>
-          <tr>
-            <td>Function</td>
-            <td>Govarnance</td>
-          </tr>
-          <tr>
-            <td>Fullname</td>
-            <td>Impulse</td>
-          </tr>
-          <tr>
-            <td>Symbol</td>
-            <td>IMP</td>
-          </tr>
-          <tr>
-            <td>Network</td>
-            <td>Binance Smartchain</td>
-          </tr>
-          <tr>
-            <td>Decimal</td>
-            <td>18</td>
-            </tr>
-          <tr>
-            <td>Transaction fee</td>
-            <td>0.1</td>
-          </tr>
-          <tr>
-            <td>Total suply</td>
-            <td>137 000 000</td>
-          </tr>
-        </table>
+        <img :src="require('@/assets/img/whitepaper/unlocked.png')" class="main whitepaper" alt="" />
+        
+        
+        
        
         <p>
           With the help of the IMP, players will be able to create, buy and sell
@@ -64,6 +33,7 @@
           These tokens can be stored in exchange for value, traded, and bet for
           interest.
         </p>
+        <img :src="require('@/assets/img/whitepaper/tokenInfo.png')" class="tokenInfo whitepaper" alt="" />
       </div>
     </WhitepaperContent>
   </div>
@@ -78,6 +48,18 @@ export default {};
 p {
   line-height: 28px;
 }
+img.whitepaper{
+  opacity: .8;
+  transition: opacity .3s;
+  &:hover{
+    opacity: 1;
+  }
+}
+img.tokenInfo{
+  width: 50%;
+  @apply md:w-full;
+}
+
 a.text-link {
   color:white;
   text-shadow:0 0 8px #ffffff99
