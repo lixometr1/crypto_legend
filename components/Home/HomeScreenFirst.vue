@@ -16,7 +16,7 @@
           >
           <a-button
             type="blur"
-            href="#"
+            href="https://www.youtube.com/watch?v=23OJEDvJ7nc"
             size="lg"
             class="home-screen-first__btn home-screen-first__btn-second"
             @click.prevent="openVideo"
