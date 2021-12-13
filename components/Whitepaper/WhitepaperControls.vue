@@ -55,7 +55,7 @@ export default {
     prevName() {
       const prevItem = data[this.currentItemIdx - 1];
       if (!prevItem) return;
-      return prevItem.value;
+      return prevItem.value;  
     },
     nextName() {
       const nextItem = data[this.currentItemIdx + 1];
