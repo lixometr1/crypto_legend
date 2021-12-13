@@ -24,7 +24,7 @@ export default {
         items: [
           {
             title: "Home",
-            link: "https://impulse.game",
+            link: "https://impulse.game ",
             // newWindow: true,
             // внешняя
             external: true
@@ -51,7 +51,7 @@ export default {
           //   title: "Buy Token"
           // },
           {
-            title: "Whitepapper",
+            title: "Whitepaper",
             link: "/whitepaper/1"
           }
         ]

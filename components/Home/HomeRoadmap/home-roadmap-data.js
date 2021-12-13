@@ -11,8 +11,8 @@ export default [
 
   {
     title: "Q4/2021",
-    pros: ["Creating a WEB Site", "Issue Whitepapper", "Impulse Trailer"],
-    cons: ["Issue $IMP Token", "Launching Airdrop", "ICO (Seed, Private sales)"]
+    pros: ["Creating a WEB Site", "Issue Whitepaper", "Impulse Trailer","Launching Airdrop"],
+    cons: ["Issue $IMP Token", "ICO (Seed, Private sales)"]
   },
   {
     title: "Q1/2022",
